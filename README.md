@@ -1,3 +1,14 @@
+---
+title: RAG Assistant - Apple Organization
+emoji: 🚀
+colorFrom: blue
+colorTo: purple
+sdk: streamlit
+sdk_version: "1.28.1"
+app_file: app.py
+pinned: false
+---
+
 # 🚀 RAG Assistant - Apple Organization Analysis
 
 A **Retrieval-Augmented Generation (RAG)** application that answers questions about Apple's organizational structure and innovation processes using multiple LLMs.
@@ -10,6 +21,8 @@ A **Retrieval-Augmented Generation (RAG)** application that answers questions ab
 - 💻 **Beautiful UI**: Clean Streamlit interface
 - 🔒 **No API Keys Stored**: Secure API key input via UI
 - 📊 **Evaluation Metrics**: Retrieval quality & answer similarity tracking
+
+... rest of your README
 
 ## 🎯 What Can It Do?
 
