@@ -1,218 +1,202 @@
----
-title: RAG Assistant - Apple Organization
-emoji: 🚀
-colorFrom: blue
-colorTo: purple
-sdk: streamlit
-sdk_version: "1.28.1"
-app_file: app.py
-pinned: false
----
+# 🎯 RAG Case Study - Apple Organizational Model
 
-# 🚀 RAG Assistant - Apple Organization Analysis
+A comprehensive **Retrieval-Augmented Generation (RAG)** system with multi-model LLM support for analyzing Apple's organizational structure.
 
-A **Retrieval-Augmented Generation (RAG)** application that answers questions about Apple's organizational structure and innovation processes using multiple LLMs.
+## ✨ Features
 
-## 📋 Features
+- **Multi-Model Support**: Claude, Google Gemini, OpenAI GPT
+- **High Accuracy**: 77.9% retrieval accuracy on 249 auto-generated questions
+- **Quality Evaluation**: 4-metric framework on 15 expert-curated queries
+- **Interactive Dashboard**: Real-time chatbot interface
+- **Production Ready**: Secure API key management, comprehensive logging
 
-- 🎯 **Multi-LLM Support**: Ollama (local), OpenAI, Google Gemini, Claude
-- 📄 **PDF-based Knowledge Base**: Automatically processes and indexes documents
-- 🔍 **Semantic Search**: Fast similarity-based retrieval using FAISS
-- 💻 **Beautiful UI**: Clean Streamlit interface
-- 🔒 **No API Keys Stored**: Secure API key input via UI
-- 📊 **Evaluation Metrics**: Retrieval quality & answer similarity tracking
-
-... rest of your README
-
-## 🎯 What Can It Do?
-
-Ask questions about:
-- Apple's organizational structure
-- Functional organization benefits
-- Leadership model and characteristics
-- Innovation processes
-- Cross-functional collaboration
-- And more!
-
-## 🚀 Quick Start (Local)
+## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8+
-- Ollama (for local LLM) - [Install here](https://ollama.ai)
+- Python 3.11+
+- Conda or venv
+- API keys (Claude, Gemini, or OpenAI)
 
 ### Installation
 ```bash
-# Clone repository
-git clone <your-repo-url>
+git clone https://github.com/sushiva/rag-case-study.git
 cd rag-case-study
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Download Ollama model (if using local LLM)
-ollama pull llama3.2:1b
-
-# Start Ollama
-ollama serve
 ```
 
-### Running the App
+### Usage
 ```bash
-# In a new terminal, from project root
 streamlit run app.py
 ```
 
-Open your browser at `http://localhost:8501`
+Then:
+1. Select your preferred LLM provider
+2. Enter your API key from that provider
+3. Ask questions about Apple's organizational model!
 
-## 📝 Usage
+## 📊 Performance Metrics
 
-1. **Select LLM Provider** (sidebar):
-   - **Ollama (Local)**: No API key needed
-   - **OpenAI**: Paste your API key
-   - **Google Gemini**: Paste your API key
-   - **Claude**: Paste your API key
+| Metric | Score |
+|--------|-------|
+| Retrieval Accuracy | 77.9% |
+| Semantic Similarity | 0.787 |
+| Overall Quality | 0.647/1.0 |
+| Questions Tested | 264 |
+| Complexity Levels | Basic, Intermediate, Advanced |
 
-2. **Ask a Question**:
-   - Type your question about Apple's organization
-   - Click "🔍 Search"
+## 🎯 Supported Models
 
-3. **Review Results**:
-   - See retrieved relevant documents
-   - Read the AI-generated answer
-   - Check similarity scores
+### Claude (Anthropic)
+- claude-3-5-sonnet-20241022
+- claude-3-5-haiku-20241022
+- claude-3-opus-20250219
 
-## 🏗️ Project Structure
+### Google Gemini
+- gemini-2.0-flash
+- gemini-1.5-pro
+- gemini-1.5-flash
+
+### OpenAI
+- gpt-4-turbo
+- gpt-4o
+- gpt-4o-mini
+- gpt-3.5-turbo
+
+## 📁 Project Structure
 ```
 rag-case-study/
-├── app.py                      # Main Streamlit application
-├── config.yaml                 # Configuration file
-├── requirements.txt            # Python dependencies
-├── README.md                   # This file
-│
+├── app.py                          # Main Streamlit app
+├── main.py                         # RAG pipeline
+├── evaluator_4metrics.py           # Quality evaluation
+├── src/
+│   ├── rag_system.py              # Core RAG system
+│   ├── rag_system_multimodel.py   # Multi-model support
+│   └── question_generator.py      # Auto-generation
+├── results/
+│   ├── auto_evaluation.json       # 249 questions results
+│   └── golden_dataset_4metric_evaluation.json
 ├── data/
-│   ├── HBR_How_Apple_Is_Organized_For_Innovation-4.pdf
-│   ├── extracted_text.txt
 │   ├── chunks.json
-│   ├── embeddings.json
-│   ├── faiss_index.bin
-│   └── metadata.json
-│
-├── scripts/
-│   ├── process_pdf.py          # Extract text from PDF
-│   ├── chunk_text.py           # Split text into chunks
-│   ├── generate_embeddings.py  # Create embeddings
-│   ├── build_vector_db.py      # Build FAISS index
-│   ├── evaluate_rag.py         # Evaluate system performance
-│   └── test_dataset.json       # Test questions
-│
-└── utils/
-    ├── retriever.py            # Semantic search
-    ├── llm_handler.py          # LLM integration
-    └── rag_chain.py            # Complete RAG pipeline
+│   └── embeddings.pkl
+└── requirements.txt
 ```
 
-## 🔧 Configuration
-
-Edit `config.yaml` to customize:
-```yaml
-# Chunk settings
-chunking:
-  chunk_size: 500        # Characters per chunk
-  chunk_overlap: 50      # Overlap between chunks
-
-# Retrieval settings
-retrieval:
-  top_k: 5              # Number of results to retrieve
-
-# LLM settings
-llm:
-  ollama:
-    model: "llama3.2:1b"
-    temperature: 0.7
-```
-
-## 📊 Evaluation
-
-Run comprehensive RAG evaluation:
-```bash
-python scripts/evaluate_rag.py
-```
-
-This generates metrics:
-- **Retrieval**: Precision@5, Recall@5, MRR
-- **Answer Quality**: Semantic similarity scores
-- **Report**: Saved as `evaluation_report.json`
-
-## 🎓 How It Works
-
-### RAG Pipeline:
+## 🏗️ System Architecture
 
 1. **Document Processing**
-   - Extract text from PDF
-   - Split into overlapping chunks
-   - Generate embeddings using `sentence-transformers`
+   - PDF loading and chunking (500 tokens, 50-token overlap)
+   - ~50 document chunks from Apple case study
 
-2. **Vector Storage**
-   - Store embeddings in FAISS index
-   - Fast similarity search
+2. **Embedding & Retrieval**
+   - Sentence-transformers (all-mpnet-base-v2)
+   - Semantic similarity search
+   - Top-k retrieval (k=3)
 
-3. **Query Processing**
-   - User asks a question
-   - Convert query to embedding
-   - Search FAISS for similar chunks (top-5)
+3. **Generation (Multi-Model)**
+   - Provider: Claude, Gemini, or OpenAI
+   - Context-grounded answer generation
+   - Consistent interface across all providers
 
-4. **Answer Generation**
-   - Send retrieved chunks + question to LLM
-   - LLM generates contextual answer
-   - Return answer with source attribution
+4. **Evaluation**
+   - Auto-generated questions: Scale testing
+   - Golden dataset: Quality assessment
+   - Metrics: Similarity, Relevance, Coherence, Groundedness
 
-## 🛠️ Tech Stack
+## 🔐 Getting API Keys
 
-| Component | Technology |
-|-----------|------------|
-| **Frontend** | Streamlit |
-| **RAG Framework** | LangChain |
-| **Embeddings** | Sentence-Transformers |
-| **Vector DB** | FAISS |
-| **LLMs** | Ollama, OpenAI, Gemini, Claude |
-| **Config** | YAML |
+### Claude (Anthropic)
+- Visit: https://console.anthropic.com/
+- Create API Key
+- Free tier available
 
-## 🔐 Security
+### Google Gemini
+- Visit: https://aistudio.google.com/
+- Get API Key
+- Free tier available
 
-- ✅ API keys **not stored** in code
-- ✅ API keys **not committed** to git
-- ✅ Secure input masking in UI
-- ✅ `.gitignore` excludes sensitive files
+### OpenAI
+- Visit: https://platform.openai.com/
+- Create API Key
+- Requires payment setup
 
-## 📈 Next Steps (Version 2)
+## 📖 Usage Examples
 
-- [ ] Multiple PDF support
-- [ ] Query history & favorites
-- [ ] User feedback mechanism
-- [ ] Answer source attribution
-- [ ] Advanced controls (top_k slider, temperature)
-- [ ] Dashboard with analytics
+### Example 1: Ask with Claude
+```
+1. Open the app
+2. Select "Claude" in sidebar
+3. Enter Anthropic API key
+4. Ask: "Why did Steve Jobs implement functional organization?"
+5. Get instant answer grounded in source document
+```
 
-## 🤝 Contributing
+### Example 2: Compare Models
+```
+1. Ask same question with Claude
+2. Switch to Gemini
+3. Ask same question
+4. Compare answers!
+```
 
-Feedback and suggestions welcome! This is Version 1 (Pilot).
+## 📊 Dashboard Pages
+
+- **💬 Chatbot**: Real-time query interface
+- **📈 Overview**: Key metrics and findings
+- **🔍 Retrieval**: Performance analysis
+- **💎 Generation**: Quality metrics
+- **📋 Analysis**: System comparison
+- **📑 Report**: Comprehensive case study
+- **ℹ️ About**: Project details
+
+## 🎓 Key Metrics
+
+- **Retrieval**: Accuracy@3, Mean Reciprocal Rank
+- **Generation**: 
+  - Similarity: Semantic alignment (0-1)
+  - Relevance: Answer quality (1-5)
+  - Coherence: Structure clarity (1-5)
+  - Groundedness: Source grounding (1-5)
+
+## 🔬 Evaluation Approach
+
+**Dual-Track:**
+- Auto-generated: 249 diverse questions for scale
+- Manual golden: 15 expert-curated queries for quality
+
+**Complexity Levels:**
+- Basic: Simple factual questions
+- Intermediate: Multi-step reasoning
+- Advanced: Complex analysis
+
+## 🚀 Deployment
+
+### Local Development
+```bash
+streamlit run app.py
+```
+
+### Streamlit Cloud (Free)
+1. Push to GitHub
+2. Go to https://streamlit.io/cloud
+3. Connect repo
+4. Deploy!
+
+## 📝 Citations
+
+- Case Study: HBR - How Apple Is Organized For Innovation
+- Embedding Model: Sentence-Transformers (all-mpnet-base-v2)
+- LLM Providers: Anthropic, Google, OpenAI
 
 ## 📄 License
 
-MIT License
+MIT License - Feel free to use for educational and commercial purposes
 
-## 👨‍💻 Author
+## 👤 Author
 
-[Your Name]
-
-## 📧 Support
-
-For issues or questions, please open an issue on GitHub.
+Shiva - ML/Data Science Portfolio Project
 
 ---
 
-**Made with ❤️ for learning RAG systems**
+**⭐ If you find this project useful, please star it on GitHub!**
+

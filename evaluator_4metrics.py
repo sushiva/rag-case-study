@@ -94,7 +94,7 @@ Return ONLY the number (1-5), nothing else."""
         
         try:
             response = self.client.messages.create(
-                model="claude-3-5-sonnet-20241022",
+                model="claude-3-5-haiku-20241022",
                 max_tokens=10,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -131,7 +131,7 @@ Return ONLY the number (1-5), nothing else."""
         
         try:
             response = self.client.messages.create(
-                model="claude-3-5-sonnet-20241022",
+                model="claude-3-5-haiku-20241022",
                 max_tokens=10,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -179,7 +179,7 @@ HALLUCINATIONS: [list any hallucinations or "None"]"""
         
         try:
             response = self.client.messages.create(
-                model="claude-3-5-sonnet-20241022",
+                model="claude-3-5-haiku-20241022",
                 max_tokens=150,
                 messages=[{"role": "user", "content": prompt}]
             )

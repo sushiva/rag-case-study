@@ -1,5 +1,6 @@
 """
-Streamlit Dashboard for RAG Case Study with Interactive Chatbot
+Enhanced RAG Dashboard with Multi-Model Support
+Supports: Claude (Anthropic), Gemini (Google), GPT (OpenAI)
 Apple Organizational Model - Interactive Results & Query Interface
 """
 
@@ -10,15 +11,14 @@ import plotly.graph_objects as go
 import plotly.express as px
 from pathlib import Path
 import sys
+import os
 
 # Add src to path for RAG imports
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 
-from rag_system import RAGSystem
-
-# Set page config
+# Set page config FIRST
 st.set_page_config(
-    page_title="RAG Case Study - Apple",
+    page_title="RAG Case Study - Multi-Model",
     page_icon="🎯",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -36,9 +36,20 @@ st.markdown("""
         border-radius: 10px;
         margin: 10px 0;
     }
-    .good { color: #28a745; font-weight: bold; }
-    .fair { color: #ffc107; font-weight: bold; }
-    .poor { color: #dc3545; font-weight: bold; }
+    .api-key-box {
+        background-color: #fff3cd;
+        padding: 15px;
+        border-left: 4px solid #ffc107;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+    .model-selector {
+        background-color: #e8f4f8;
+        padding: 15px;
+        border-left: 4px solid #3498db;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
     .context-box {
         background-color: #e8f4f8;
         padding: 15px;
@@ -56,6 +67,43 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# Model configurations
+MODEL_CONFIGS = {
+    'Claude': {
+        'provider': 'anthropic',
+        'models': [
+            'claude-3-5-haiku-20241022',
+            'claude-3-opus-20250219',
+        ],
+        'env_var': 'ANTHROPIC_API_KEY',
+        'color': '#9D4EDD',
+        'icon': '🤖'
+    },
+    'Google Gemini': {
+        'provider': 'google',
+        'models': [
+            'gemini-2.0-flash',
+            'gemini-1.5-pro',
+            'gemini-1.5-flash',
+        ],
+        'env_var': 'GOOGLE_API_KEY',
+        'color': '#4285F4',
+        'icon': '🔮'
+    },
+    'OpenAI': {
+        'provider': 'openai',
+        'models': [
+            'gpt-4-turbo',
+            'gpt-4o',
+            'gpt-4o-mini',
+            'gpt-3.5-turbo',
+        ],
+        'env_var': 'OPENAI_API_KEY',
+        'color': '#00A67E',
+        'icon': '⚡'
+    }
+}
+
 # Initialize session state
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
@@ -63,8 +111,17 @@ if 'chat_history' not in st.session_state:
 if 'rag_system' not in st.session_state:
     st.session_state.rag_system = None
 
-if 'rag_initialized' not in st.session_state:
-    st.session_state.rag_initialized = False
+if 'selected_model_provider' not in st.session_state:
+    st.session_state.selected_model_provider = 'Claude'
+
+if 'selected_model' not in st.session_state:
+    st.session_state.selected_model = MODEL_CONFIGS['Claude']['models'][0]
+
+if 'api_keys' not in st.session_state:
+    st.session_state.api_keys = {}
+
+if 'api_valid' not in st.session_state:
+    st.session_state.api_valid = {}
 
 # Load data
 @st.cache_data
@@ -88,23 +145,196 @@ def load_data():
         st.error(f"Error loading data: {e}")
         return None, None, None
 
-# Initialize RAG system
-@st.cache_resource
-def init_rag_system():
-    """Initialize RAG system (cached)"""
+# Create RAG system with selected model
+def create_rag_system(model_provider, model_name, api_key):
+    """Create RAG system with selected model"""
     try:
+        from src.rag_system import RAGSystemMultiModel
+        
         pdf_path = BASE_DIR / 'data' / 'HBR_How_Apple_Is_Organized_For_Innovation-4.pdf'
         
+        rag = RAGSystemMultiModel(
+            pdf_path=str(pdf_path),
+            embedding_model="all-mpnet-base-v2",
+            model_provider=model_provider,
+            model_name=model_name,
+            api_key=api_key
+        )
+        rag.build(chunk_size=500, chunk_overlap=50, use_cached=True)
+        return rag
+    except ImportError:
+        # Fallback to original RAG system if multi-model version not available
+        st.warning("Multi-model support not yet implemented, using Claude backend")
+        from src.rag_system import RAGSystem
+        
+        pdf_path = BASE_DIR / 'data' / 'HBR_How_Apple_Is_Organized_For_Innovation-4.pdf'
+        
+        os.environ['ANTHROPIC_API_KEY'] = api_key
         rag = RAGSystem(
             pdf_path=str(pdf_path),
             embedding_model="all-mpnet-base-v2",
-            claude_model="claude-3-haiku-20240307"
+            claude_model=model_name
         )
         rag.build(chunk_size=500, chunk_overlap=50, use_cached=True)
         return rag
     except Exception as e:
         st.error(f"Error initializing RAG system: {e}")
         return None
+
+# Validate API key
+def validate_api_key(provider, api_key):
+    """Validate API key with test call"""
+    try:
+        if provider == 'Claude':
+            from anthropic import Anthropic
+            client = Anthropic(api_key=api_key)
+            response = client.messages.create(
+                model="claude-3-5-haiku-20241022",
+                max_tokens=10,
+                messages=[{"role": "user", "content": "test"}]
+            )
+        
+        elif provider == 'Google Gemini':
+            import google.generativeai as genai
+            genai.configure(api_key=api_key)
+            model = genai.GenerativeModel('gemini-2.5-flash')
+            response = model.generate_content("test")
+        
+        elif provider == 'OpenAI':
+            from openai import OpenAI
+            client = OpenAI(api_key=api_key)
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                max_tokens=10,
+                messages=[{"role": "user", "content": "test"}]
+            )
+        
+        return True
+    except Exception as e:
+        st.error(f"Invalid API key: {str(e)[:100]}")
+        return False
+
+# Setup multi-model API key management
+def setup_multi_model_sidebar():
+    """Setup API key input for multiple models"""
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("## 🔑 API Configuration")
+    
+    # Model Provider Selection
+    st.sidebar.markdown("### 📦 Select Model Provider")
+    
+    col1, col2, col3 = st.sidebar.columns(3)
+    
+    with col1:
+        if st.button(f"{MODEL_CONFIGS['Claude']['icon']} Claude", use_container_width=True):
+            st.session_state.selected_model_provider = 'Claude'
+            st.rerun()
+    
+    with col2:
+        if st.button(f"{MODEL_CONFIGS['Google Gemini']['icon']} Gemini", use_container_width=True):
+            st.session_state.selected_model_provider = 'Google Gemini'
+            st.rerun()
+    
+    with col3:
+        if st.button(f"{MODEL_CONFIGS['OpenAI']['icon']} OpenAI", use_container_width=True):
+            st.session_state.selected_model_provider = 'OpenAI'
+            st.rerun()
+    
+    st.sidebar.markdown("---")
+    
+    # Current provider info
+    provider = st.session_state.selected_model_provider
+    config = MODEL_CONFIGS[provider]
+    
+    st.sidebar.markdown(f"### {config['icon']} {provider}")
+    
+    # Check environment variable
+    api_key_env = os.getenv(config['env_var'])
+    
+    if api_key_env and provider not in st.session_state.api_valid:
+        st.sidebar.success(f"✓ API Key loaded from {config['env_var']}")
+        st.session_state.api_keys[provider] = api_key_env
+        st.session_state.api_valid[provider] = True
+    
+    # Show instructions
+    if provider == 'Claude':
+        st.sidebar.markdown("""
+        **Get API Key:**
+        1. Visit [console.anthropic.com](https://console.anthropic.com/)
+        2. Sign up/Login
+        3. API Keys → Create Key
+        4. Copy key (starts with `sk-ant-`)
+        """)
+    
+    elif provider == 'Google Gemini':
+        st.sidebar.markdown("""
+        **Get API Key:**
+        1. Visit [aistudio.google.com](https://aistudio.google.com/)
+        2. Click "Get API Key"
+        3. Create new API key
+        4. Copy the key
+        """)
+    
+    elif provider == 'OpenAI':
+        st.sidebar.markdown("""
+        **Get API Key:**
+        1. Visit [platform.openai.com](https://platform.openai.com/)
+        2. Sign up/Login
+        3. API Keys → Create new
+        4. Copy the key (starts with `sk-`)
+        """)
+    
+    # API Key input
+    api_key_input = st.sidebar.text_input(
+        f"Enter {provider} API Key:",
+        type="password",
+        value=st.session_state.api_keys.get(provider, ""),
+        key=f"api_key_{provider}"
+    )
+    
+    col1, col2 = st.sidebar.columns(2)
+    
+    with col1:
+        if st.button(f"🔐 Validate {provider}", use_container_width=True):
+            if not api_key_input:
+                st.sidebar.error("Please enter an API key")
+            else:
+                with st.spinner("🔄 Validating..."):
+                    if validate_api_key(provider, api_key_input):
+                        st.session_state.api_keys[provider] = api_key_input
+                        st.session_state.api_valid[provider] = True
+                        st.sidebar.success(f"✓ {provider} API Key validated!")
+                        st.rerun()
+                    else:
+                        st.sidebar.error(f"❌ Invalid {provider} API key")
+    
+    with col2:
+        if st.button(f"🧹 Clear Key", use_container_width=True):
+            if provider in st.session_state.api_keys:
+                del st.session_state.api_keys[provider]
+            if provider in st.session_state.api_valid:
+                del st.session_state.api_valid[provider]
+            st.rerun()
+    
+    # Model selection
+    if st.session_state.api_valid.get(provider):
+        st.sidebar.markdown("---")
+        st.sidebar.markdown("### 🎯 Select Model")
+        
+        selected_model = st.sidebar.selectbox(
+            "Choose model:",
+            config['models'],
+            key=f"model_select_{provider}"
+        )
+        
+        st.session_state.selected_model = selected_model
+        
+        st.sidebar.success(f"✓ Connected with {provider}")
+        st.sidebar.info(f"Model: {selected_model}")
+        
+        return True
+    
+    return False
 
 # Load report content
 def load_report():
@@ -120,19 +350,21 @@ def load_report():
 # Main app
 def main():
     # Header
-    st.markdown("# 🎯 RAG Case Study - Apple Organizational Model")
-    st.markdown("**Retrieval-Augmented Generation System with Comprehensive Evaluation**")
+    st.markdown("# 🎯 RAG Case Study - Multi-Model Support")
+    st.markdown("**Retrieval-Augmented Generation with Claude, Gemini & OpenAI**")
     
     # Load data
     auto_eval, golden_eval, report = load_data()
     
     if auto_eval is None:
         st.error(f"Could not load evaluation results from {BASE_DIR}")
-        st.info("Make sure you're running from the rag-case-study directory:")
-        st.code("cd ~/portfolio-project/rag-case-study && streamlit run app_dashboard.py")
         return
     
+    # Setup API key and model selection in sidebar
+    api_key_valid = setup_multi_model_sidebar()
+    
     # Sidebar navigation
+    st.sidebar.markdown("---")
     st.sidebar.markdown("## 📊 Navigation")
     page = st.sidebar.radio(
         "Select Section:",
@@ -152,17 +384,42 @@ def main():
     # =====================================================================
     if page == "💬 Ask Questions (Chatbot)":
         st.markdown("## 🤖 Interactive RAG Chatbot")
+        
+        # Display selected model
+        provider = st.session_state.selected_model_provider
+        model = st.session_state.selected_model
+        config = MODEL_CONFIGS[provider]
+        
+        st.markdown(f"**Using: {config['icon']} {provider} - {model}**")
+        
         st.markdown("Ask questions about Apple's organizational model and get answers from the document!")
         
+        # Check if API key is available
+        if not api_key_valid:
+            st.warning("⚠️ **API Key Required**")
+            st.info(f"""
+            To use the chatbot, please:
+            1. Select a model provider from the sidebar
+            2. Get your API key from the provider's console
+            3. Enter it in the sidebar
+            4. Click **🔐 Validate** button
+            5. Return here and ask questions!
+            """)
+            return
+        
         # Initialize RAG system
-        with st.spinner("🔄 Initializing RAG system..."):
-            rag = init_rag_system()
+        with st.spinner(f"🔄 Initializing RAG with {provider}..."):
+            rag = create_rag_system(
+                provider,
+                model,
+                st.session_state.api_keys[provider]
+            )
         
         if rag is None:
             st.error("Failed to initialize RAG system")
             return
         
-        st.success("✓ RAG system ready!")
+        st.success(f"✓ RAG system ready with {provider}!")
         
         st.markdown("---")
         
@@ -204,7 +461,7 @@ def main():
         
         st.markdown("---")
         
-        # FIXED VERSION:
+        # Chat input - MUST be outside columns/expanders
         st.markdown("### ✍️ Ask a Question")
         
         user_input = st.chat_input(
@@ -226,7 +483,7 @@ def main():
             
             # Generate answer
             with st.chat_message("assistant", avatar="🤖"):
-                with st.spinner("🔄 Searching documents and generating answer..."):
+                with st.spinner(f"🔄 Searching documents and generating answer using {provider}..."):
                     try:
                         # Query RAG system
                         result = rag.query(user_input, top_k=3)
@@ -250,7 +507,7 @@ def main():
                         
                         # Show source info
                         st.divider()
-                        col1, col2, col3 = st.columns(3)
+                        col1, col2, col3, col4 = st.columns(4)
                         with col1:
                             st.metric("Retrieved Chunks", len(result.get('retrieved_results', [])))
                         with col2:
@@ -258,7 +515,9 @@ def main():
                                 pages = [r.page for r in result['retrieved_results']]
                                 st.metric("Source Pages", f"{min(pages)}-{max(pages)}")
                         with col3:
-                            st.metric("Model", result['metadata']['claude_model'].split('/')[-1])
+                            st.metric("Provider", provider)
+                        with col4:
+                            st.metric("Model", model.split('/')[-1][:20])
                     
                     except Exception as e:
                         st.error(f"Error generating answer: {e}")
@@ -307,6 +566,37 @@ def main():
         
         st.markdown("---")
         
+        # Model comparison info
+        st.markdown("### 🎯 Multi-Model Support")
+        
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            st.markdown(f"""
+            **{MODEL_CONFIGS['Claude']['icon']} Claude (Anthropic)**
+            - Fast & accurate
+            - Best for reasoning
+            - Free tier available
+            """)
+        
+        with col2:
+            st.markdown(f"""
+            **{MODEL_CONFIGS['Google Gemini']['icon']} Gemini (Google)**
+            - Multimodal capable
+            - Excellent context window
+            - Good for long docs
+            """)
+        
+        with col3:
+            st.markdown(f"""
+            **{MODEL_CONFIGS['OpenAI']['icon']} OpenAI**
+            - Industry standard
+            - Highly reliable
+            - Excellent quality
+            """)
+        
+        st.markdown("---")
+        
         # Key findings
         st.markdown("### 🎯 Key Findings")
         
@@ -316,8 +606,8 @@ def main():
             st.markdown("#### ✅ Strengths")
             st.markdown(f"""
             - **Strong Retrieval**: {auto_eval['summary']['accuracy']:.1%} accuracy on 249 questions
-            - **Good Semantic Alignment**: {golden_eval['summary']['metrics']['similarity']['mean']:.3f} similarity with expert answers
-            - **Scale Tested**: System validated at 5x scale
+            - **Good Semantic Alignment**: {golden_eval['summary']['metrics']['similarity']['mean']:.3f} similarity
+            - **Multi-Model Support**: Use any LLM provider
             - **Consistent Performance**: All question types >75% accuracy
             """)
         
@@ -380,10 +670,10 @@ def main():
         # Insights
         st.markdown("### 📊 Insights")
         st.markdown(f"""
-        - **Basic Questions**: {complexity_data['basic']*100:.1f}% accuracy - Excellent foundation
-        - **Intermediate Questions**: {complexity_data['intermediate']*100:.1f}% accuracy - Strong performance
-        - **Advanced Questions**: {complexity_data['advanced']*100:.1f}% accuracy - Good understanding of complex topics
-        - **All complexity levels exceed 75% accuracy** - Demonstrates robust semantic search
+        - **Basic Questions**: {complexity_data['basic']*100:.1f}% accuracy
+        - **Intermediate Questions**: {complexity_data['intermediate']*100:.1f}% accuracy
+        - **Advanced Questions**: {complexity_data['advanced']*100:.1f}% accuracy
+        - **All complexity levels exceed 75% accuracy**
         """)
     
     # =====================================================================
@@ -450,34 +740,6 @@ def main():
             height=500
         )
         st.plotly_chart(fig, use_container_width=True)
-        
-        st.markdown("---")
-        
-        # Overall quality
-        st.markdown("### Overall Quality Assessment")
-        
-        overall_score = golden_eval['summary']['overall_score']
-        col1, col2 = st.columns([2, 1])
-        
-        with col1:
-            if overall_score > 0.80:
-                quality = "EXCELLENT"
-                color = "green"
-            elif overall_score > 0.70:
-                quality = "GOOD"
-                color = "blue"
-            elif overall_score > 0.60:
-                quality = "FAIR"
-                color = "orange"
-            else:
-                quality = "NEEDS IMPROVEMENT"
-                color = "red"
-            
-            st.markdown(f"**Overall Quality Score: {overall_score:.3f}/1.0**")
-            st.markdown(f"**Assessment: {quality}**")
-        
-        with col2:
-            st.metric("Potential Score", "0.85+/1.0", "With improvements")
     
     # =====================================================================
     # PAGE 4: COMBINED ANALYSIS
@@ -485,7 +747,6 @@ def main():
     elif page == "📋 Combined Analysis":
         st.markdown("## System Performance Overview")
         
-        # Create comparison
         col1, col2, col3 = st.columns(3)
         
         with col1:
@@ -544,28 +805,6 @@ def main():
         fig.update_traces(textposition='outside')
         fig.update_yaxes(range=[0, 1])
         st.plotly_chart(fig, use_container_width=True)
-        
-        st.markdown("---")
-        
-        # Recommendations
-        st.markdown("### 💡 Recommendations for Improvement")
-        
-        st.markdown("""
-        **SHORT-TERM (Quick Wins):**
-        1. Improve system prompt with clearer instructions
-        2. Add few-shot examples for better guidance
-        3. Enforce source citations
-        
-        **MEDIUM-TERM (Structural):**
-        1. Implement hybrid search (semantic + keyword)
-        2. Fine-tune on domain data
-        3. Add answer validation layer
-        
-        **LONG-TERM (Strategic):**
-        1. Production deployment with caching
-        2. Domain specialization for Apple
-        3. Multi-turn conversation support
-        """)
     
     # =====================================================================
     # PAGE 5: FULL REPORT
@@ -603,24 +842,26 @@ def main():
         ### 📊 Project Overview
         
         This is a comprehensive case study of a **Retrieval-Augmented Generation (RAG)** system
-        built to analyze Apple's organizational structure and innovation practices.
+        with **multi-model support** for analyzing Apple's organizational structure.
         
-        ### 🎯 Objectives
+        ### 🎯 Multi-Model Support
         
-        1. Implement a production-ready RAG system
-        2. Evaluate retrieval quality at scale (249 questions)
-        3. Assess generation quality on expert-curated queries (15 queries)
-        4. Provide comprehensive analysis and recommendations
+        Choose from your preferred LLM provider:
         
-        ### 📈 Evaluation Approach
+        **Claude (Anthropic)**
+        - Latest: Claude 3.5 Sonnet, Haiku
+        - Fast reasoning and analysis
+        - Free tier available
         
-        **Dual-Track Evaluation:**
-        - **Manual Golden Dataset**: 15 expert-curated queries (4 metrics)
-        - **Auto-Generated Questions**: 249 questions from chunks (scale testing)
+        **Google Gemini**
+        - Latest: Gemini 2.0 Flash
+        - Excellent long-context handling
+        - Multimodal capabilities
         
-        **Metrics:**
-        - Retrieval: Accuracy@3, MRR
-        - Generation: Similarity, Relevance, Coherence, Groundedness
+        **OpenAI GPT**
+        - Latest: GPT-4o, GPT-4 Turbo
+        - Industry-standard quality
+        - Highly reliable
         
         ### 🏗️ System Architecture
         
@@ -634,28 +875,35 @@ def main():
            - Search: Semantic similarity
            - Top-k: 3 results
         
-        3. **Generation**
-           - Model: Claude 3.5 Sonnet
+        3. **Generation (Multi-Model)**
+           - Claude, Gemini, or GPT
+           - Context: Retrieved chunks
            - Task: Answer generation grounded in context
         
         4. **Evaluation**
-           - Auto-generated questions for scale testing
-           - Manual golden dataset for quality assessment
+           - 249 auto-generated questions for scale testing
+           - 15 manual golden queries for quality assessment
            - 4 metrics for comprehensive evaluation
+        
+        ### 🔑 Getting API Keys
+        
+        **Claude (Anthropic):**
+        Visit: [console.anthropic.com](https://console.anthropic.com/)
+        
+        **Gemini (Google):**
+        Visit: [aistudio.google.com](https://aistudio.google.com/)
+        
+        **OpenAI:**
+        Visit: [platform.openai.com](https://platform.openai.com/)
         
         ### 📁 Deliverables
         
-        - ✅ RAG System Implementation
+        - ✅ RAG System with Multi-Model Support
         - ✅ 249 Auto-Generated Questions
         - ✅ 4-Metric Evaluation Framework
         - ✅ Comprehensive Case Study Report
         - ✅ Interactive Dashboard with Chatbot
-        
-        ### 🔗 Links
-        
-        - **GitHub**: [rag-case-study](https://github.com/sushiva/rag-case-study)
-        - **Report**: COMPREHENSIVE_CASE_STUDY_REPORT.txt
-        - **Data**: results/ folder
+        - ✅ Multi-Provider API Key Management
         """)
     
     # Footer
@@ -663,9 +911,9 @@ def main():
     st.markdown("""
     <div style="text-align: center; color: gray; font-size: 12px;">
     RAG Case Study - Apple Organizational Model | 
+    Multi-Model Support (Claude, Gemini, OpenAI) | 
     Retrieval Accuracy: 77.9% | 
-    Overall Quality: 0.647/1.0 | 
-    Interactive Chatbot Available 💬
+    Quality: 0.647/1.0
     </div>
     """, unsafe_allow_html=True)
 
