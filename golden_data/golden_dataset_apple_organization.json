@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "dataset_name": "Apple Organizational Model - Golden Context Dataset",
+    "source_document": "How Apple Is Organized for Innovation (HBR, Nov-Dec 2020)",
+    "authors": "Joel M. Podolny and Morten T. Hansen",
+    "created_date": "2025-11-11",
+    "total_queries": 15,
+    "verification_status": "manually_verified",
+    "purpose": "RAG evaluation benchmark for Apple organizational structure case study"
+  },
+  "queries": [
+    {
+      "id": 1,
+      "query": "Why did Steve Jobs implement a functional organization structure when he returned to Apple in 1997?",
+      "expert_answer": "Steve Jobs believed that conventional management had stifled innovation. In his first year returning as CEO, he laid off the general managers of all business units (in a single day), put the entire company under one P&L, and combined the disparate functional departments of the business units into one functional organization. This was done to eliminate inter-departmental conflicts over transfer prices and create alignment around a single organizational structure.",
+      "source_page": "4",
+      "source_passage": "When Jobs arrived back at Apple, it had a conventional structure for a company of its size and scope. It was divided into business units, each with its own P&L responsibilities... Believing that conventional management had stifled innovation, Jobs, in his first year returning as CEO, laid off the general managers of all the business units (in a single day), put the entire company under one P&L, and combined the disparate functional departments of the business units into one functional organization.",
+      "confidence_score": 0.98,
+      "domain": "organizational_strategy"
+    },
+    {
+      "id": 2,
+      "query": "What is remarkable about Apple's organizational structure given its growth from 1998 to 2020?",
+      "expert_answer": "What is remarkable is that Apple has retained its functional structure even though the company is nearly 40 times as large in terms of revenue and far more complex than it was in 1998. Most large corporations would have shifted to a multidivisional structure, but Apple bucked this conventional wisdom. Senior vice presidents remain in charge of functions, not products, and the CEO is still the only position where design, engineering, operations, marketing, and retail of Apple's main products meet.",
+      "source_page": "4",
+      "source_passage": "What is surprising—in fact, remarkable—is that Apple retains it today, even though the company is nearly 40 times as large in terms of revenue and far more complex than it was in 1998. Senior vice presidents are in charge of functions, not products.",
+      "confidence_score": 0.99,
+      "domain": "organizational_structure"
+    },
+    {
+      "id": 3,
+      "query": "According to business historians like Alfred Chandler, what should large companies do as they grow?",
+      "expert_answer": "Business history and organizational theory, documented by Harvard Business School historian Alfred Chandler, make the case that as entrepreneurial firms grow large and complex, they must shift from a functional to a multidivisional structure. This shift aligns accountability and control and prevents congestion when countless decisions flow up the organizational chart to the top. By the latter half of the 20th century, the vast majority of large U.S. corporations had followed this pattern, which Chandler documented with companies like DuPont and General Motors.",
+      "source_page": "4",
+      "source_passage": "Business history and organizational theory make the case that as entrepreneurial firms grow large and complex, they must shift from a functional to a multidivisional structure to align accountability and control... As the Harvard Business School historian Alfred Chandler documented, U.S. companies such as DuPont and General Motors moved from a functional to a multidivisional structure in the early 20th century.",
+      "confidence_score": 0.97,
+      "domain": "business_history"
+    },
+    {
+      "id": 4,
+      "query": "What are the three key leadership characteristics expected of Apple managers?",
+      "expert_answer": "Apple's managers at every level are expected to possess three key leadership characteristics: (1) deep expertise that allows them to meaningfully engage in all work within their functions, (2) immersion in the details of those functions, and (3) a willingness to collaboratively debate other functions during collective decision-making. When managers have these attributes, decisions are made in a coordinated fashion by the people most qualified to make them.",
+      "source_page": "6",
+      "source_passage": "Ever since Steve Jobs implemented the functional organization, Apple's managers at every level, from senior vice president on down, have been expected to possess three key leadership characteristics: deep expertise that allows them to meaningfully engage in all the work being done within their individual functions; immersion in the details of those functions; and a willingness to collaboratively debate other functions during collective decision-making.",
+      "confidence_score": 0.98,
+      "domain": "leadership_model"
+    },
+    {
+      "id": 5,
+      "query": "Why does Apple believe in the principle 'experts lead experts' rather than general managers?",
+      "expert_answer": "Apple's assumption is that it is easier to train an expert to manage well than to train a manager to be an expert. At Apple, hardware experts manage hardware, software experts manage software, and so on. The rationale is that world-class talent wants to work for and with other world-class talent in their specialty. It is like joining a sports team where you get to learn from and play with the best. Additionally, experts leading experts creates a deep bench in a given area where specialists can learn from one another.",
+      "source_page": "6-7",
+      "source_passage": "Apple is not a company where general managers oversee managers; rather, it is a company where experts lead experts. The assumption is that it's easier to train an expert to manage well than to train a manager to be an expert... Apple's leaders believe that world-class talent wants to work for and with other world-class talent in a specialty. It's like joining a sports team where you get to learn from and play with the best.",
+      "confidence_score": 0.98,
+      "domain": "leadership_philosophy"
+    },
+    {
+      "id": 6,
+      "query": "What did Steve Jobs say in 1984 about hiring professional managers at Apple?",
+      "expert_answer": "In a 1984 interview, Steve Jobs said: 'We went through that stage in Apple where we went out and thought, Oh, we're gonna be a big company, let's hire professional management. We went out and hired a bunch of professional management. It didn't work at all... They knew how to manage, but they didn't know how to do anything.' He emphasized that great individual contributors who become managers are the best managers, because great people want to work for someone they can learn from.",
+      "source_page": "7",
+      "source_passage": "In a 1984 interview he said, 'We went through that stage in Apple where we went out and thought, Oh, we're gonna be a big company, let's hire professional management. We went out and hired a bunch of professional management. It didn't work at all....They knew how to manage, but they didn't know how to do anything. If you're a great person, why do you want to work for somebody you can't learn anything from?'",
+      "confidence_score": 0.99,
+      "domain": "leadership_philosophy"
+    },
+    {
+      "id": 7,
+      "query": "What is the principle about detail immersion that Apple leaders follow?",
+      "expert_answer": "One principle that permeates Apple is 'Leaders should know the details of their organization three levels down,' because this is essential for speedy and effective cross-functional decision-making at the highest levels. If managers attend a decision-making meeting without the details at their disposal, the decision must either be made without the details or postponed. This principle is central at the leadership level, not just pushed down to lower-level people.",
+      "source_page": "7",
+      "source_passage": "One principle that permeates Apple is 'Leaders should know the details of their organization three levels down,' because that is essential for speedy and effective cross-functional decision-making at the highest levels.",
+      "confidence_score": 0.97,
+      "domain": "leadership_practices"
+    },
+    {
+      "id": 8,
+      "query": "What is a 'squircle' and why does Apple focus on it?",
+      "expert_answer": "A 'squircle' is a shape known in the design community that combines continuous curves without abrupt transitions. The standard method for rounding corners uses a circular arc, which creates a somewhat abrupt transition. In contrast, Apple's leaders insist on continuous curves (squircles), where the slope starts sooner but is less abrupt. An advantage of this design is that it produces softer highlights with little to no jump in light reflection along the corner. This example demonstrates Apple's fanatical attention to detail and willingness to commit to extremely precise manufacturing tolerances to execute on such subtle design choices.",
+      "source_page": "7",
+      "source_passage": "Consider how its senior leaders pay extreme attention to the exact shape of products' rounded corners... In contrast, Apple's leaders insist on continuous curves, resulting in a shape known in the design community as a 'squircle'... An advantage of hardware products without abrupt changes in curvature is that they produce softer highlights (that is, little to no jump in light reflection along the corner).",
+      "confidence_score": 0.98,
+      "domain": "design_attention_to_detail"
+    },
+    {
+      "id": 9,
+      "query": "How many specialist teams were required to develop the iPhone 7 Plus dual-lens camera with portrait mode?",
+      "expert_answer": "The dual-lens camera with portrait mode required the collaboration of no fewer than 40 specialist teams. These teams included: silicon design, camera software, reliability engineering, motion sensor hardware, video engineering, core motion, and camera sensor design, among others. This example illustrates the complexity of coordination required at Apple and demonstrates why collaborative debate among specialist teams is crucial.",
+      "source_page": "7-8",
+      "source_passage": "the dual-lens camera with portrait mode required the collaboration of no fewer than 40 specialist teams: silicon design, camera software, reliability engineering, motion sensor hardware, video engineering, core motion, and camera sensor design, to name just a few.",
+      "confidence_score": 0.99,
+      "domain": "product_development"
+    },
+    {
+      "id": 10,
+      "query": "Describe the problem that emerged with portrait mode's bokeh algorithm and how Apple addressed it.",
+      "expert_answer": "Early attempts at portrait mode produced amazing photos but also 'failure cases' where the algorithm could not distinguish between the central object (like a face) and the background. For example, if a person was photographed behind chicken wire, the algorithm could not blur the wire in the background while keeping the wire in front sharp. This violated Apple's strict engineering standard of zero 'artifacts' (undesired alterations in data). The design and marketing leaders joined the debate and brought an artistic perspective, looking at great portrait photographers' work and noting they often had blurring at face edges but sharpness on eyes. This helped establish a new quality standard that was both technically sound and artistically acceptable.",
+      "source_page": "9",
+      "source_passage": "The first attempts produced some amazing portrait pictures but also a number of 'failure cases' in which the algorithm was unable to distinguish between the central object in sharp relief (a face, for instance) and the background being blurred... To get some agreement on quality standards, the engineering teams invited senior design and marketing leaders to meet... The design leaders brought an additional artistic sensibility to the debate, asking, 'What makes a beautiful portrait?'",
+      "confidence_score": 0.97,
+      "domain": "product_development_case_study"
+    },
+    {
+      "id": 11,
+      "query": "What is 'accountability without control' at Apple and why is it important?",
+      "expert_answer": "Accountability without control means you are accountable for making a project succeed even though you don't control all the other teams needed for that success. For example, while Graham Townsend is accountable for how great the camera is, he needed dozens of other teams (each with their own commitments) to contribute to the portrait mode project. This process can be messy, but when done with a shared purpose it creates 'good mess.' 'Bad mess' occurs when teams push their own agendas ahead of common goals. This model works because it forces effective collaboration and ensures projects succeed through coordinated effort rather than hierarchical control.",
+      "source_page": "9",
+      "source_passage": "While Townsend is accountable for how great the camera is, he needed dozens of other teams—each of which had a long list of its own commitments—to contribute their time and effort to the portrait mode project. At Apple that's known as accountability without control: You're accountable for making the project succeed even though you don't control all the other teams.",
+      "confidence_score": 0.98,
+      "domain": "organizational_concepts"
+    },
+    {
+      "id": 12,
+      "query": "How has Apple's functional structure evolved since Tim Cook became CEO?",
+      "expert_answer": "As the company has grown and entered new markets and technologies, Apple's functional structure has had to evolve. Tim Cook's recent adjustments include: (1) dividing the hardware function into hardware engineering and hardware technologies, (2) adding artificial intelligence and machine learning as a separate functional area, and (3) moving human interface out of software to merge it with industrial design, creating an integrated design function. These changes reflect Apple's commitment to adapting its structure to enable collaboration and rapid decision-making in new technological domains.",
+      "source_page": "10",
+      "source_passage": "The adjustments Tim Cook has implemented in recent years include dividing the hardware function into hardware engineering and hardware technologies; adding artificial intelligence and machine learning as a functional area; and moving human interface out of software to merge it with industrial design, creating an integrated design function.",
+      "confidence_score": 0.97,
+      "domain": "organizational_evolution"
+    },
+    {
+      "id": 13,
+      "query": "What is the discretionary leadership model and why did Apple develop it?",
+      "expert_answer": "The discretionary leadership model is Apple's response to the challenge of maintaining its leadership approach (experts leading experts, immersion in details, and collaborative debate) at an ever-greater scale. As Apple has grown from 17,000 employees in 2006 to 137,000 in 2019, senior leaders now head larger and more diverse teams, making it impossible to know every detail. The model teaches leaders to exercise discretion about where to spend their time, dividing their responsibilities into four categories: owning (40%), learning (30%), teaching (15%), and delegating (15%). This preserves Apple's fundamental principle of aligning expertise with decision rights while enabling growth.",
+      "source_page": "10",
+      "source_passage": "Apple has been quite disciplined about limiting the number of senior positions to minimize how many leaders must be involved in any cross-functional activity... they now need to exercise greater discretion regarding where and how they spend their time and efforts... We have codified these adaptions in what we call the discretionary leadership model",
+      "confidence_score": 0.96,
+      "domain": "leadership_innovation"
+    },
+    {
+      "id": 14,
+      "query": "How does Roger Rosner allocate his time across the four categories of the discretionary leadership model?",
+      "expert_answer": "Roger Rosner, Apple's VP of applications, allocates his time approximately as follows: 40% on activities he owns (including collaboration with others), 30% on learning new areas of expertise, 15% on teaching others his craft, and 15% on delegating work to team members. He owns core areas like UI design and software architecture, is learning about News publishing and digital advertising, teaches colleagues about productivity apps like Keynote and Pages, and delegates areas like iMovie and GarageBand where he is not an expert.",
+      "source_page": "10-11",
+      "source_passage": "Rosner estimates that he spends about 40% of his time on activities he owns (including collaboration with others in a given area), about 30% on learning, about 15% on teaching, and about 15% on delegating.",
+      "confidence_score": 0.98,
+      "domain": "leadership_case_study"
+    },
+    {
+      "id": 15,
+      "query": "What is the fundamental principle of an effective functional organization at scale according to Apple?",
+      "expert_answer": "The fundamental principle of an effective functional organization is aligning expertise with decision rights. This contrasts with the conventional principle of a business unit structure, which aims to align accountability and control. At Apple, those with the most expertise and experience in a domain should have decision rights for that domain. This principle enables Apple to effectively move into new areas when leaders take on responsibilities outside their original expertise, and allows teams to grow when leaders teach and delegate work while maintaining the core alignment of expertise and decision-making authority.",
+      "source_page": "11",
+      "source_passage": "The discretionary leadership model preserves the fundamental principle of an effective functional organization at scale—aligning expertise and decision rights... Whereas the fundamental principle of a conventional business unit structure is to align accountability and control, the fundamental principle of a functional organization is to align expertise and decision rights.",
+      "confidence_score": 0.99,
+      "domain": "organizational_principles"
+    }
+  ],
+  "summary": {
+    "total_queries": 15,
+    "domains_covered": [
+      "organizational_strategy",
+      "organizational_structure",
+      "business_history",
+      "leadership_model",
+      "leadership_philosophy",
+      "leadership_practices",
+      "design_attention_to_detail",
+      "product_development",
+      "product_development_case_study",
+      "organizational_concepts",
+      "organizational_evolution",
+      "leadership_innovation",
+      "leadership_case_study",
+      "organizational_principles"
+    ],
+    "average_confidence": 0.976,
+    "verification_method": "manual_expert_verification",
+    "notes": "All queries are grounded in the source document with exact page references and source passages. Answers are expert-verified and paired with exact quotations from the document to serve as ground truth for RAG evaluation."
+  }
+}

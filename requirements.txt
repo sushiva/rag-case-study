@@ -4,6 +4,7 @@ python-dotenv==1.0.0
 
 # PDF Processing
 PyPDF2==3.0.1
+pypdf>=4.0.0
 
 # LLM & Embeddings
 langchain>=0.1.0
@@ -23,3 +24,4 @@ anthropic>=0.7.0
 requests==2.31.0
 
 PyYAML>=6.0.3
+

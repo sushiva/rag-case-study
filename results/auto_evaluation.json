@@ -1,0 +1,2998 @@
+{
+  "summary": {
+    "total_questions": 249,
+    "correct_retrievals": 194,
+    "accuracy": 0.779,
+    "mean_reciprocal_rank": 0.683,
+    "chunk_coverage": 1.0
+  },
+  "by_complexity": {
+    "basic": 0.819,
+    "intermediate": 0.843,
+    "advanced": 0.675
+  },
+  "detailed_results": [
+    {
+      "question_id": 1,
+      "question": "What publication was this article originally published in?",
+      "expected_chunk": 0,
+      "retrieved_chunks": [
+        "1",
+        "3",
+        "71"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 2,
+      "question": "What organizational factors and leadership approaches enable Apple to effectively foster innovation within its expert-driven culture?",
+      "expected_chunk": 0,
+      "retrieved_chunks": [
+        "2",
+        "0",
+        "39"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 3,
+      "question": "What strategic and organizational factors contribute to Apple's ability to consistently innovate, and how might other companies seek to emulate this approach?",
+      "expected_chunk": 0,
+      "retrieved_chunks": [
+        "24",
+        "10",
+        "4"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 4,
+      "question": "What publication is this article from?",
+      "expected_chunk": 1,
+      "retrieved_chunks": [
+        "3",
+        "1",
+        "41"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 5,
+      "question": "What strategic implications does the Harvard Business Review article's publication date and distribution method suggest about the content and intended audience?",
+      "expected_chunk": 1,
+      "retrieved_chunks": [
+        "70",
+        "41",
+        "3"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 6,
+      "question": "How might the business insights and principles discussed in this HBR article be adapted and applied to organizations in different industries or sectors beyond the tech industry?",
+      "expected_chunk": 1,
+      "retrieved_chunks": [
+        "11",
+        "70",
+        "13"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 7,
+      "question": "Who are the authors of the article?",
+      "expected_chunk": 2,
+      "retrieved_chunks": [
+        "71",
+        "1",
+        "2"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 8,
+      "question": "How does Apple's organizational structure, which has experts leading experts, contribute to its ability to innovate?",
+      "expected_chunk": 2,
+      "retrieved_chunks": [
+        "24",
+        "78",
+        "2"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 9,
+      "question": "How does Apple's organizational culture, as described in this excerpt, enable and support the company's approach to innovation?",
+      "expected_chunk": 2,
+      "retrieved_chunks": [
+        "2",
+        "12",
+        "0"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 10,
+      "question": "What is the publication date of the Harvard Business Review article?",
+      "expected_chunk": 3,
+      "retrieved_chunks": [
+        "3",
+        "41",
+        "70"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 11,
+      "question": "How might the complimentary nature of this article distribution by Apple Inc. relate to the business relationship or strategic interests between Apple and the Harvard Business Review?",
+      "expected_chunk": 3,
+      "retrieved_chunks": [
+        "13",
+        "70",
+        "29"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 12,
+      "question": "What strategic implications might the business model shifts discussed in the article have for organizations, and how could leaders effectively navigate these changes while maintaining competitive advantage?",
+      "expected_chunk": 3,
+      "retrieved_chunks": [
+        "11",
+        "79",
+        "29"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 13,
+      "question": "What was the company's revenue in 1997 when Steve Jobs returned?",
+      "expected_chunk": 4,
+      "retrieved_chunks": [
+        "4",
+        "28",
+        "27"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 14,
+      "question": "What organizational design and leadership model contributed to Apple's innovation success after Steve Jobs returned to the company in 1997?",
+      "expected_chunk": 4,
+      "retrieved_chunks": [
+        "4",
+        "24",
+        "28"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 15,
+      "question": "How has Apple's organizational design and leadership model evolved over time to enable its sustained innovation and growth, and what key principles or practices might other organizations emulate to achieve similar success?",
+      "expected_chunk": 4,
+      "retrieved_chunks": [
+        "24",
+        "10",
+        "4"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 16,
+      "question": "What were the main business units that the company was divided into?",
+      "expected_chunk": 5,
+      "retrieved_chunks": [
+        "5",
+        "6",
+        "28"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 17,
+      "question": "How did the decentralized business unit structure of the company affect the dynamics and relationships between the managers of the different divisions?",
+      "expected_chunk": 5,
+      "retrieved_chunks": [
+        "5",
+        "79",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 18,
+      "question": "What were the potential advantages and disadvantages of Apple's decentralized business unit structure under Jobs, and how might this structure have impacted innovation and collaboration within the company?",
+      "expected_chunk": 5,
+      "retrieved_chunks": [
+        "6",
+        "10",
+        "5"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 19,
+      "question": "What did the CEO do in his first year returning as CEO?",
+      "expected_chunk": 6,
+      "retrieved_chunks": [
+        "28",
+        "6",
+        "7"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 20,
+      "question": "Why did Apple retain its functional organizational structure even after becoming a much larger company over time?",
+      "expected_chunk": 6,
+      "retrieved_chunks": [
+        "10",
+        "6",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 21,
+      "question": "What strategic advantages or disadvantages might a functional organizational structure provide Apple, given the company's rapid growth, diversification into new product lines, and global operations?",
+      "expected_chunk": 6,
+      "retrieved_chunks": [
+        "10",
+        "6",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 22,
+      "question": "How many times larger is the company in terms of revenue compared to 1998?",
+      "expected_chunk": 7,
+      "retrieved_chunks": [
+        "29",
+        "4",
+        "3"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 23,
+      "question": "How does the organizational structure of Apple, with senior vice presidents in charge of functions rather than products and the CEO as the only position overseeing all aspects of the company's main products, differ from the typical general manager-led structure of many large corporations?",
+      "expected_chunk": 7,
+      "retrieved_chunks": [
+        "7",
+        "28",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 24,
+      "question": "How might Apple's organizational structure, with the CEO serving as the sole point of integration across functions, impact the company's agility and responsiveness to changing market conditions?",
+      "expected_chunk": 7,
+      "retrieved_chunks": [
+        "24",
+        "10",
+        "78"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 25,
+      "question": "What type of structure must firms shift to as they grow large and complex, according to the text?",
+      "expected_chunk": 8,
+      "retrieved_chunks": [
+        "8",
+        "79",
+        "9"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 26,
+      "question": "Why is the shift from a functional to a multidivisional structure necessary as entrepreneurial firms grow larger and more complex?",
+      "expected_chunk": 8,
+      "retrieved_chunks": [
+        "8",
+        "9",
+        "79"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 27,
+      "question": "What are the potential advantages and disadvantages of a multidivisional structure as an organization grows, and how might leaders balance the need for accountability and control with the potential for congestion and centralization?",
+      "expected_chunk": 8,
+      "retrieved_chunks": [
+        "8",
+        "79",
+        "9"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 28,
+      "question": "What type of organizational structure did U.S. companies such as DuPont and General Motors move to in the early 20th century according to the text?",
+      "expected_chunk": 9,
+      "retrieved_chunks": [
+        "9",
+        "5",
+        "6"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 29,
+      "question": "Why did U.S. companies such as DuPont and General Motors move from a functional to a multidivisional structure in the early 20th century?",
+      "expected_chunk": 9,
+      "retrieved_chunks": [
+        "9",
+        "6",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 30,
+      "question": "What potential drawbacks or challenges might arise from the transition to a multidivisional organizational structure, and how could executives address these issues to maintain alignment and coordination across the different business units?",
+      "expected_chunk": 9,
+      "retrieved_chunks": [
+        "8",
+        "11",
+        "79"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 31,
+      "question": "What approach does Apple prove is not necessary?",
+      "expected_chunk": 10,
+      "retrieved_chunks": [
+        "16",
+        "20",
+        "17"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 32,
+      "question": "How has Apple's functional organizational structure evolved over time to address the changing technological landscape and leadership challenges, and what are the potential innovation benefits of this approach?",
+      "expected_chunk": 10,
+      "retrieved_chunks": [
+        "10",
+        "24",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 33,
+      "question": "How can Apple's approach to a functional organizational structure balance the need for innovation and agility with the challenges of leadership and decision-making in a rapidly evolving technological landscape?",
+      "expected_chunk": 10,
+      "retrieved_chunks": [
+        "10",
+        "24",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 34,
+      "question": "What is one major cause of major companies struggling to stay abreast of rapidly changing technologies?",
+      "expected_chunk": 11,
+      "retrieved_chunks": [
+        "11",
+        "17",
+        "40"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 35,
+      "question": "Why does the text suggest that the organizational model discussed may be useful for individuals and companies in rapidly changing environments?",
+      "expected_chunk": 11,
+      "retrieved_chunks": [
+        "11",
+        "80",
+        "12"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 36,
+      "question": "How might the traditional siloed business unit structure impede an organization's ability to rapidly adapt to disruptive technological changes, and what alternative organizational models could be more effective?",
+      "expected_chunk": 11,
+      "retrieved_chunks": [
+        "11",
+        "79",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 37,
+      "question": "What is the Apple model described in the text?",
+      "expected_chunk": 12,
+      "retrieved_chunks": [
+        "4",
+        "30",
+        "16"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 38,
+      "question": "Why does Apple's organizational model emphasize cross-functional collaboration and deep domain expertise among its leaders?",
+      "expected_chunk": 12,
+      "retrieved_chunks": [
+        "12",
+        "78",
+        "39"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 39,
+      "question": "How can Apple's organizational model, where leaders have deep cross-functional expertise and decision rights are aligned with functions, help address the challenge of business leaders lacking a comprehensive understanding of all domains under their purview?",
+      "expected_chunk": 12,
+      "retrieved_chunks": [
+        "12",
+        "65",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 40,
+      "question": "What magazine is this article from?",
+      "expected_chunk": 13,
+      "retrieved_chunks": [
+        "68",
+        "71",
+        "1"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 41,
+      "question": "How might Apple's sponsorship of this Harvard Business Review article suggest a strategic partnership or alignment of interests between the two organizations?",
+      "expected_chunk": 13,
+      "retrieved_chunks": [
+        "13",
+        "29",
+        "70"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 42,
+      "question": "How might the key insights from this HBR article help a company navigate the complexities of digital transformation and organizational change in a volatile business environment?",
+      "expected_chunk": 13,
+      "retrieved_chunks": [
+        "11",
+        "41",
+        "70"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 43,
+      "question": "What is Apple's main purpose according to the text?",
+      "expected_chunk": 14,
+      "retrieved_chunks": [
+        "14",
+        "30",
+        "16"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 44,
+      "question": "How does Apple's commitment to continuous innovation, as exemplified by the iPhone camera, align with the company's main purpose of creating products that enrich people's daily lives?",
+      "expected_chunk": 14,
+      "retrieved_chunks": [
+        "14",
+        "15",
+        "42"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 45,
+      "question": "How might Apple's functional organizational structure enable or hinder its ability to continuously innovate products like the iPhone camera?",
+      "expected_chunk": 14,
+      "retrieved_chunks": [
+        "14",
+        "10",
+        "34"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 46,
+      "question": "What year was the dual-lens camera introduced on the iPhone?",
+      "expected_chunk": 15,
+      "retrieved_chunks": [
+        "15",
+        "48",
+        "47"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 47,
+      "question": "How has Apple's strategic focus on iPhone camera technology over the past decade impacted the broader photography industry, and what specific innovations have contributed to this impact?",
+      "expected_chunk": 15,
+      "retrieved_chunks": [
+        "15",
+        "2",
+        "42"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 48,
+      "question": "How might the continuous innovation in iPhone camera technology influence the overall strategy and positioning of Apple in the smartphone market, and what implications might this have for competitors in the photography and mobile device industries?",
+      "expected_chunk": 15,
+      "retrieved_chunks": [
+        "15",
+        "2",
+        "14"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 49,
+      "question": "What does Apple rely on to create innovations?",
+      "expected_chunk": 16,
+      "retrieved_chunks": [
+        "16",
+        "0",
+        "2"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 50,
+      "question": "How does Apple's organizational structure, which emphasizes functional expertise and decision-making authority, help the company navigate the high rates of technological change and disruption in the markets it competes in?",
+      "expected_chunk": 16,
+      "retrieved_chunks": [
+        "10",
+        "78",
+        "24"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 51,
+      "question": "How might Apple's decision-making structure, which emphasizes functional expertise, enable the company to respond more nimbly to rapid technological change and disruption compared to more hierarchical or centralized organizational models?",
+      "expected_chunk": 16,
+      "retrieved_chunks": [
+        "10",
+        "78",
+        "24"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 52,
+      "question": "What does the text say increases the odds that Apple's bets on technologies and designs will pay off?",
+      "expected_chunk": 17,
+      "retrieved_chunks": [
+        "20",
+        "17",
+        "16"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 53,
+      "question": "What is the relationship between Apple's reliance on technical experts and its ability to make successful bets on emerging technologies?",
+      "expected_chunk": 17,
+      "retrieved_chunks": [
+        "17",
+        "78",
+        "16"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 54,
+      "question": "How can a company like Apple balance its commitment to offering the best possible products with the need to make strategic bets on emerging technologies in the face of uncertainty and limited market feedback?",
+      "expected_chunk": 17,
+      "retrieved_chunks": [
+        "17",
+        "20",
+        "16"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 55,
+      "question": "Where is Apple's corporate headquarters located?",
+      "expected_chunk": 18,
+      "retrieved_chunks": [
+        "18",
+        "28",
+        "27"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 56,
+      "question": "What is the significance of Apple Park's location in Cupertino, California, in the context of the company's corporate headquarters?",
+      "expected_chunk": 18,
+      "retrieved_chunks": [
+        "18",
+        "30",
+        "4"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 57,
+      "question": "How might the architectural design and layout of Apple Park influence the company's organizational culture, communication, and decision-making processes?",
+      "expected_chunk": 18,
+      "retrieved_chunks": [
+        "18",
+        "24",
+        "0"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 58,
+      "question": "What are the overriding criteria for judging investments and leaders according to the text?",
+      "expected_chunk": 19,
+      "retrieved_chunks": [
+        "19",
+        "25",
+        "44"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 59,
+      "question": "How does the separation of responsibilities between R&D executives and the finance team at this company help to insulate product decisions from short-term financial pressures?",
+      "expected_chunk": 19,
+      "retrieved_chunks": [
+        "19",
+        "21",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 60,
+      "question": "How might the separation of financial and product decision-making processes impact a company's ability to respond to changing market conditions or customer needs in a timely manner?",
+      "expected_chunk": 19,
+      "retrieved_chunks": [
+        "8",
+        "19",
+        "11"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 61,
+      "question": "How does Apple's approach to deciding which technologies and features to pursue differ from that of conventionally organized companies?",
+      "expected_chunk": 20,
+      "retrieved_chunks": [
+        "20",
+        "78",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 62,
+      "question": "How does Apple's approach to cost and revenue goals in technology development differ from that of conventionally organized companies?",
+      "expected_chunk": 20,
+      "retrieved_chunks": [
+        "20",
+        "10",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 63,
+      "question": "How do Apple's approach to R&D and decision-making differ from more conventional companies, and what are the potential advantages and challenges of their model?",
+      "expected_chunk": 20,
+      "retrieved_chunks": [
+        "10",
+        "78",
+        "16"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 64,
+      "question": "What was the decision that the text mentions as a big wager?",
+      "expected_chunk": 21,
+      "retrieved_chunks": [
+        "21"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 65,
+      "question": "What was the key consideration that influenced the decision to introduce the dual-lens camera with portrait mode in the iPhone 7 Plus, and what was the role of individual and team reputations in that decision?",
+      "expected_chunk": 21,
+      "retrieved_chunks": [
+        "55",
+        "46",
+        "21"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 66,
+      "question": "What key organizational factors and leadership dynamics likely influenced the decision to introduce the dual-lens camera with portrait mode in the iPhone 7 Plus, and how might these have contributed to the successful execution and adoption of this innovative feature?",
+      "expected_chunk": 21,
+      "retrieved_chunks": [
+        "21",
+        "40",
+        "55"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 67,
+      "question": "What was the risk that the team was taking by including a more costly and better camera in the iPhone 7 Plus?",
+      "expected_chunk": 22,
+      "retrieved_chunks": [
+        "15",
+        "51",
+        "50"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 68,
+      "question": "What was the risk that the team was taking by focusing on a more costly and better camera for the iPhone 7 Plus, and how did the success of that feature affect the team's reputation?",
+      "expected_chunk": 22,
+      "retrieved_chunks": [
+        "15",
+        "51",
+        "21"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 69,
+      "question": "How might Hubel and his team have assessed and mitigated the risks of investing in a more expensive camera feature for the iPhone 7 Plus, and what strategic considerations should they have taken into account in making that decision?",
+      "expected_chunk": 22,
+      "retrieved_chunks": [
+        "15",
+        "51",
+        "22"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 70,
+      "question": "What is the fundamental principle of a functional organization?",
+      "expected_chunk": 23,
+      "retrieved_chunks": [
+        "23",
+        "14",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 71,
+      "question": "Why does the text suggest that a functional organization aligns expertise and decision rights, rather than simply aligning accountability and control as in a conventional business unit structure?",
+      "expected_chunk": 23,
+      "retrieved_chunks": [
+        "23",
+        "79",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 72,
+      "question": "What are the potential tradeoffs or challenges that can arise when an organization prioritizes aligning expertise and decision rights over aligning accountability and control, as described in the passage?",
+      "expected_chunk": 23,
+      "retrieved_chunks": [
+        "79",
+        "23",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 73,
+      "question": "What leadership model underlies Apple's organizational structure?",
+      "expected_chunk": 24,
+      "retrieved_chunks": [
+        "24",
+        "12",
+        "10"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 74,
+      "question": "What is the relationship between Apple's organizational structure and the type of innovations it produces, and how does this differ from the structure that Chandler anticipated for large multinationals?",
+      "expected_chunk": 24,
+      "retrieved_chunks": [
+        "24",
+        "10",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 75,
+      "question": "How does Apple's unique leadership model, which deviates from Chandler's anticipated structure for large multinationals, enable the company to drive disruptive innovation and maintain its competitive edge?",
+      "expected_chunk": 24,
+      "retrieved_chunks": [
+        "24",
+        "10",
+        "64"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 76,
+      "question": "What are the three key leadership characteristics that managers are expected to possess?",
+      "expected_chunk": 25,
+      "retrieved_chunks": [
+        "25",
+        "77",
+        "44"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 77,
+      "question": "What is the significance of leaders possessing deep expertise, detailed knowledge, and a willingness to collaborate in the decision-making process, according to the text?",
+      "expected_chunk": 25,
+      "retrieved_chunks": [
+        "25",
+        "44",
+        "65"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 78,
+      "question": "What potential challenges or tradeoffs might arise when leaders need to balance deep expertise and function-specific immersion with the need for cross-functional collaboration and collective decision-making?",
+      "expected_chunk": 25,
+      "retrieved_chunks": [
+        "44",
+        "80",
+        "65"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 79,
+      "question": "What kind of experts manage different areas at Apple according to the text?",
+      "expected_chunk": 26,
+      "retrieved_chunks": [
+        "26",
+        "65",
+        "30"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 80,
+      "question": "Why does Apple prefer to have experts manage experts rather than general managers overseeing managers?",
+      "expected_chunk": 26,
+      "retrieved_chunks": [
+        "26",
+        "39",
+        "17"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 81,
+      "question": "What are the potential advantages and limitations of Apple's organizational structure of having experts manage experts, and how might this approach affect the company's ability to adapt to changing market conditions or emerging technologies?",
+      "expected_chunk": 26,
+      "retrieved_chunks": [
+        "78",
+        "26",
+        "39"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 82,
+      "question": "What are the functional areas listed in Apple's organizational structure?",
+      "expected_chunk": 27,
+      "retrieved_chunks": [
+        "10",
+        "24",
+        "6"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 83,
+      "question": "What is the purpose of organizing Apple's departments into distinct functional areas, and how does this structure contribute to the company's overall strategy and operations?",
+      "expected_chunk": 27,
+      "retrieved_chunks": [
+        "34",
+        "6",
+        "10"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 84,
+      "question": "How can Apple's functional organizational structure support its strategy of innovation and diversification across hardware, software, and services?",
+      "expected_chunk": 27,
+      "retrieved_chunks": [
+        "10",
+        "24",
+        "78"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 85,
+      "question": "What structure did Apple have when Steve Jobs returned in 1997?",
+      "expected_chunk": 28,
+      "retrieved_chunks": [
+        "4",
+        "28",
+        "6"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 86,
+      "question": "How did Steve Jobs' decision to restructure Apple's organization into a functional model instead of a divisional model impact the company's operations and decision-making processes?",
+      "expected_chunk": 28,
+      "retrieved_chunks": [
+        "6",
+        "10",
+        "28"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 87,
+      "question": "What are the potential advantages and disadvantages of Apple's functional organizational structure compared to its previous business unit structure, and how might this decision have impacted Apple's innovation and agility during Steve Jobs' tenure?",
+      "expected_chunk": 28,
+      "retrieved_chunks": [
+        "6",
+        "10",
+        "14"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 88,
+      "question": "What publication is this article from?",
+      "expected_chunk": 29,
+      "retrieved_chunks": [
+        "3",
+        "1",
+        "41"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 89,
+      "question": "What is the significance of the article's publication date in relation to the CEO1998 identifier and the context of the Harvard Business Review?",
+      "expected_chunk": 29,
+      "retrieved_chunks": [
+        "29",
+        "3",
+        "41"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 90,
+      "question": "How might the CEO's strategic approach to innovation and technology adoption need to evolve to address emerging market trends and competitive pressures that were not present in the late 1990s when the company was founded?",
+      "expected_chunk": 29,
+      "retrieved_chunks": [
+        "11",
+        "29",
+        "81"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 91,
+      "question": "What did Steve Jobs say in a 1984 interview about managers at Apple?",
+      "expected_chunk": 30,
+      "retrieved_chunks": [
+        "4",
+        "30",
+        "6"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 92,
+      "question": "Why does Apple believe that world-class talent wants to work with other world-class talent in a specialty?",
+      "expected_chunk": 30,
+      "retrieved_chunks": [
+        "30",
+        "17",
+        "39"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 93,
+      "question": "What strategic implications does Apple's emphasis on specialized, expert managers have for the company's organizational structure, decision-making processes, and ability to adapt to changing market conditions?",
+      "expected_chunk": 30,
+      "retrieved_chunks": [
+        "26",
+        "17",
+        "39"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 94,
+      "question": "What did the company do after deciding to hire professional management?",
+      "expected_chunk": 31,
+      "retrieved_chunks": [
+        "31",
+        "26",
+        "5"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 95,
+      "question": "Why does the text suggest that the best managers are often the great individual contributors who never want to be managers?",
+      "expected_chunk": 31,
+      "retrieved_chunks": [
+        "31",
+        "26",
+        "44"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 96,
+      "question": "Why does the text suggest that the \"best managers\" are often those who are reluctant to become managers, and how does this insight challenge common assumptions about effective management?",
+      "expected_chunk": 31,
+      "retrieved_chunks": [
+        "31",
+        "79",
+        "44"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 97,
+      "question": "What software applications does Apple's software application business, which is headed by Roger Rosner, include?",
+      "expected_chunk": 32,
+      "retrieved_chunks": [
+        "32",
+        "68",
+        "72"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 98,
+      "question": "What is the significance of Roger Rosner's background in electrical engineering in relation to his role overseeing Apple's software application business?",
+      "expected_chunk": 32,
+      "retrieved_chunks": [
+        "32",
+        "68",
+        "33"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 99,
+      "question": "Why is it important for Apple to have an experienced software executive like Roger Rosner leading their suite of productivity and creative applications, and what strategic advantages could this provide the company?",
+      "expected_chunk": 32,
+      "retrieved_chunks": [
+        "32",
+        "33",
+        "68"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 100,
+      "question": "What position did Rosner hold at Apple from 2013 onward?",
+      "expected_chunk": 33,
+      "retrieved_chunks": [
+        "33",
+        "32",
+        "68"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 101,
+      "question": "What challenges might Rosner face as a senior executive leading a team of experts in a functional organizational structure?",
+      "expected_chunk": 33,
+      "retrieved_chunks": [
+        "33",
+        "71",
+        "80"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 102,
+      "question": "What are the potential advantages and challenges of having experts lead other experts within a functional organizational structure, and how might a company leverage this dynamic to drive innovation and achieve strategic objectives?",
+      "expected_chunk": 33,
+      "retrieved_chunks": [
+        "80",
+        "10",
+        "23"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 103,
+      "question": "How many experts on camera hardware technology work at Apple?",
+      "expected_chunk": 34,
+      "retrieved_chunks": [
+        "42",
+        "34",
+        "2"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 104,
+      "question": "Why does Apple organize its camera hardware experts in a centralized group rather than dispersing them across different product lines?",
+      "expected_chunk": 34,
+      "retrieved_chunks": [
+        "34",
+        "42",
+        "40"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 105,
+      "question": "How can Apple's organizational structure of grouping experts across product lines help the company maintain a competitive advantage in camera technology over its rivals?",
+      "expected_chunk": 34,
+      "retrieved_chunks": [
+        "34",
+        "42",
+        "2"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 106,
+      "question": "What principle permeates Apple, according to the text?",
+      "expected_chunk": 35,
+      "retrieved_chunks": [
+        "35",
+        "16",
+        "30"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 107,
+      "question": "Why does Apple emphasize that leaders should know the details of their organization three levels down?",
+      "expected_chunk": 35,
+      "retrieved_chunks": [
+        "35",
+        "65",
+        "12"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 108,
+      "question": "How can a leader's in-depth knowledge of organizational details three levels down help facilitate effective and timely cross-functional decision-making at the top, and what are the potential risks or drawbacks of not having this level of detailed understanding?",
+      "expected_chunk": 35,
+      "retrieved_chunks": [
+        "35",
+        "44",
+        "25"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 109,
+      "question": "What is the standard method for rounding corners on a rectangular object?",
+      "expected_chunk": 36,
+      "retrieved_chunks": [
+        "36",
+        "58",
+        "59"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 110,
+      "question": "How does the example of Apple's attention to detail in the product design process illustrate the broader point made in the passage about the importance of delving into the specifics for many companies?",
+      "expected_chunk": 36,
+      "retrieved_chunks": [
+        "38",
+        "35",
+        "30"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 111,
+      "question": "How might the level of detail and focus on design elements that Apple exhibits impact their organizational culture, decision-making processes, and ability to innovate compared to other companies?",
+      "expected_chunk": 36,
+      "retrieved_chunks": [
+        "24",
+        "2",
+        "0"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 112,
+      "question": "What is the shape known in the design community as a \"squircle\" as described in the text?",
+      "expected_chunk": 37,
+      "retrieved_chunks": [
+        "59",
+        "37",
+        "36"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 113,
+      "question": "How does the design philosophy of using continuous curves in Apple's products, as opposed to abrupt transitions, contribute to the visual aesthetics and practical considerations of their hardware design?",
+      "expected_chunk": 37,
+      "retrieved_chunks": [
+        "37",
+        "59",
+        "36"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 114,
+      "question": "How might Apple's approach to product design, with its emphasis on continuous curves and \"squircles,\" influence the company's overall branding and user experience strategy?",
+      "expected_chunk": 37,
+      "retrieved_chunks": [
+        "37",
+        "59",
+        "36"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 115,
+      "question": "What does executing on Apple's products demand from their operations leaders?",
+      "expected_chunk": 38,
+      "retrieved_chunks": [
+        "65",
+        "38",
+        "26"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 116,
+      "question": "Why is the level of detail and precision required in Apple's manufacturing processes considered central at the leadership level, rather than just a concern pushed down to lower-level employees?",
+      "expected_chunk": 38,
+      "retrieved_chunks": [
+        "38",
+        "26",
+        "35"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 117,
+      "question": "What strategic and operational challenges does Apple's focus on precise manufacturing tolerances and deep immersion in product details create for its leadership team, and how might these challenges impact the company's ability to scale and innovate over time?",
+      "expected_chunk": 38,
+      "retrieved_chunks": [
+        "38",
+        "17",
+        "65"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 118,
+      "question": "What does Apple provide that many people find liberating and exhilarating to work for?",
+      "expected_chunk": 39,
+      "retrieved_chunks": [
+        "39",
+        "4",
+        "16"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 119,
+      "question": "How does the leadership style at Apple encourage collaboration and foster employees' expertise in their respective areas?",
+      "expected_chunk": 39,
+      "retrieved_chunks": [
+        "39",
+        "64",
+        "65"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 120,
+      "question": "What organizational challenges might arise from having a large number of specialist teams that operate in a highly debative and probing manner, and how could Apple's leadership address these issues to maintain a cohesive and productive work environment?",
+      "expected_chunk": 39,
+      "retrieved_chunks": [
+        "39",
+        "65",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 121,
+      "question": "How many Apple leaders were required for the collaboration of the dual-lens camera with portrait mode?",
+      "expected_chunk": 40,
+      "retrieved_chunks": [
+        "40",
+        "42",
+        "55"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 122,
+      "question": "What organizational factors are necessary to enable the collaboration and expertise required for the development of a new product's key components?",
+      "expected_chunk": 40,
+      "retrieved_chunks": [
+        "40",
+        "42",
+        "23"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 123,
+      "question": "What key factors or challenges might Apple have faced in collaborating across multiple teams to develop the dual-lens camera with portrait mode, and how does this example illustrate the need for a strong organizational culture that supports deep expertise and collaborative debate?",
+      "expected_chunk": 40,
+      "retrieved_chunks": [
+        "40",
+        "42",
+        "55"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 124,
+      "question": "What is the publication date of the Harvard Business Review article?",
+      "expected_chunk": 41,
+      "retrieved_chunks": [
+        "3",
+        "41",
+        "70"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 125,
+      "question": "Why did Apple Inc. provide this Harvard Business Review article for personal use, but not permit further posting, copying, or distribution?",
+      "expected_chunk": 41,
+      "retrieved_chunks": [
+        "13",
+        "29",
+        "70"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 126,
+      "question": "How might the strategic considerations and recommendations in this article apply differently to a small, family-owned business compared to a large, publicly-traded corporation? What key factors would influence the relevance and implementation of the ideas presented?",
+      "expected_chunk": 41,
+      "retrieved_chunks": [
+        "13",
+        "82",
+        "70"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 127,
+      "question": "How many specialist teams are mentioned in the text?",
+      "expected_chunk": 42,
+      "retrieved_chunks": [
+        "71",
+        "42",
+        "63"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 128,
+      "question": "How does Apple's collaborative debate process help coordinate the specialized teams involved in product development?",
+      "expected_chunk": 42,
+      "retrieved_chunks": [
+        "42",
+        "55",
+        "39"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 129,
+      "question": "How do the collaborative debates at Apple help the company overcome the challenges of coordinating 40 specialist teams and ship complex products that require cross-functional collaboration?",
+      "expected_chunk": 42,
+      "retrieved_chunks": [
+        "42",
+        "55",
+        "39"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 130,
+      "question": "What do higher-level managers, including the CEO and senior VPs, do as tiebreakers?",
+      "expected_chunk": 43,
+      "retrieved_chunks": [
+        "43",
+        "66",
+        "44"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 131,
+      "question": "Why is it important for Apple to fill many senior positions from within the ranks of its VPs?",
+      "expected_chunk": 43,
+      "retrieved_chunks": [
+        "63",
+        "43",
+        "66"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 132,
+      "question": "How can a company like Apple effectively balance the need for higher-level executive oversight with the challenge of resolving a large number of complex, time-sensitive decisions across its expansive operations?",
+      "expected_chunk": 43,
+      "retrieved_chunks": [
+        "43",
+        "26",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 133,
+      "question": "What are the potential consequences of ineffective peer relationships at the VP and director levels?",
+      "expected_chunk": 44,
+      "retrieved_chunks": [
+        "44",
+        "80",
+        "66"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 134,
+      "question": "How can ineffective peer relationships at the VP and director levels undermine the entire company, and what is required for people to effectively lead within a function?",
+      "expected_chunk": 44,
+      "retrieved_chunks": [
+        "44",
+        "66",
+        "80"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 135,
+      "question": "How might the challenges of ineffective peer relationships at the VP and director levels impact the overall organizational strategy and ability to achieve cross-functional objectives?",
+      "expected_chunk": 44,
+      "retrieved_chunks": [
+        "44",
+        "80",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 136,
+      "question": "What two things facilitate a leader's ability to be both partisan and open-minded?",
+      "expected_chunk": 45,
+      "retrieved_chunks": [
+        "45",
+        "25",
+        "44"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 137,
+      "question": "What is the key balance that a leader must strike according to the text, and how do the two factors mentioned help facilitate this balance?",
+      "expected_chunk": 45,
+      "retrieved_chunks": [
+        "25",
+        "45",
+        "44"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 138,
+      "question": "What challenges might a leader face in maintaining a balance between advocating for their views and being open-minded to others' perspectives, especially when the \"right\" path may be difficult to execute?",
+      "expected_chunk": 45,
+      "retrieved_chunks": [
+        "45",
+        "44",
+        "25"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 139,
+      "question": "What term is used to refer to the pleasing blurring of a background in a portrait photo?",
+      "expected_chunk": 46,
+      "retrieved_chunks": [
+        "49",
+        "52",
+        "48"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 140,
+      "question": "What is the significance of the development of the iPhone's portrait mode in terms of the collaborative process and decision-making at Apple?",
+      "expected_chunk": 46,
+      "retrieved_chunks": [
+        "55",
+        "46",
+        "21"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 141,
+      "question": "How might the process of developing the iPhone's portrait mode feature illustrate broader principles about effective decision-making, collaboration, and achieving ambitious goals within an organization?",
+      "expected_chunk": 46,
+      "retrieved_chunks": [
+        "55",
+        "46",
+        "21"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 142,
+      "question": "What types of cameras could take high-quality photos at the time mentioned in the text?",
+      "expected_chunk": 47,
+      "retrieved_chunks": [
+        "47",
+        "48",
+        "15"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 143,
+      "question": "What advantage did Hubel's dual-lens design have over the single-lens reflex cameras that were considered the highest quality at the time?",
+      "expected_chunk": 47,
+      "retrieved_chunks": [
+        "47",
+        "51",
+        "22"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 144,
+      "question": "How could the advancement in dual-lens camera technology described in the text be leveraged to create new business models or product offerings that could disrupt the photography industry?",
+      "expected_chunk": 47,
+      "retrieved_chunks": [
+        "47",
+        "40",
+        "15"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 145,
+      "question": "What was the stated purpose of the camera team?",
+      "expected_chunk": 48,
+      "retrieved_chunks": [
+        "54",
+        "51",
+        "56"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 146,
+      "question": "How did the team's stated purpose of \"More people taking better images more of the time\" guide their approach to addressing the challenges that emerged when implementing the computational photography techniques in the iPhone?",
+      "expected_chunk": 48,
+      "retrieved_chunks": [
+        "48",
+        "15",
+        "46"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 147,
+      "question": "What potential organizational and strategic implications might arise from Apple successfully implementing this new camera technology, and how could they navigate the tradeoffs between the \"amazing portrait pictures\" and the \"failure cases\" mentioned in the text?",
+      "expected_chunk": 48,
+      "retrieved_chunks": [
+        "15",
+        "48",
+        "40"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 148,
+      "question": "What was the example given for the blurred background effect?",
+      "expected_chunk": 49,
+      "retrieved_chunks": [
+        "49",
+        "53",
+        "52"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 149,
+      "question": "Why was it not possible to construct an algorithm that would capture the chicken wire to the side of the face with the same sharpness as the chicken wire in front of it?",
+      "expected_chunk": 49,
+      "retrieved_chunks": [
+        "49",
+        "36",
+        "52"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 150,
+      "question": "What strategic implications might this technological limitation have for businesses or organizations that rely on high-quality, detailed imagery to promote their products or services?",
+      "expected_chunk": 49,
+      "retrieved_chunks": [
+        "47",
+        "40",
+        "48"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 151,
+      "question": "What does Apple's engineering standard of zero \"artifacts\" mean?",
+      "expected_chunk": 50,
+      "retrieved_chunks": [
+        "50",
+        "52",
+        "37"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 152,
+      "question": "Why did the camera team and other teams have \"many tough discussions\" about corner cases, according to the text?",
+      "expected_chunk": 50,
+      "retrieved_chunks": [
+        "50",
+        "51",
+        "53"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 153,
+      "question": "How could Apple's engineering standard of zero \"artifacts\" create challenges for the camera team in balancing the needs of different stakeholders and teams involved in the product development process?",
+      "expected_chunk": 50,
+      "retrieved_chunks": [
+        "50",
+        "42",
+        "51"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 154,
+      "question": "What decision did Sebastien Marineau-Mes make regarding the release of the feature?",
+      "expected_chunk": 51,
+      "retrieved_chunks": [
+        "51",
+        "53",
+        "46"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 155,
+      "question": "What was the rationale behind the decision to delay the release of the camera software feature?",
+      "expected_chunk": 51,
+      "retrieved_chunks": [
+        "51",
+        "15",
+        "53"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 156,
+      "question": "What considerations and tradeoffs did the engineering teams likely weigh in deciding to defer the release of the feature, and how might this decision have impacted the broader organization's priorities and product roadmap?",
+      "expected_chunk": 51,
+      "retrieved_chunks": [
+        "51",
+        "19",
+        "20"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 157,
+      "question": "What were some of the characteristics of the photos from great portrait photographers that the design leaders noted?",
+      "expected_chunk": 52,
+      "retrieved_chunks": [
+        "52",
+        "47",
+        "46"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 158,
+      "question": "What was the key insight that the design leaders brought to the discussion about creating beautiful portraits, and how did they use that insight to work with the algorithm teams to develop an acceptable standard?",
+      "expected_chunk": 52,
+      "retrieved_chunks": [
+        "52",
+        "46",
+        "48"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 159,
+      "question": "How could the analysis and insights from the portrait photography experts be applied to other areas of the organization, such as product design or marketing, to enhance the visual appeal and emotional impact of the company's offerings?",
+      "expected_chunk": 52,
+      "retrieved_chunks": [
+        "40",
+        "46",
+        "2"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 160,
+      "question": "What was the issue that emerged regarding the ability to preview a portrait photo with a blurred background?",
+      "expected_chunk": 53,
+      "retrieved_chunks": [
+        "53",
+        "50",
+        "46"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 161,
+      "question": "What was the main disagreement between the camera team and the human interface (HI) design team regarding the portrait photo feature?",
+      "expected_chunk": 53,
+      "retrieved_chunks": [
+        "53",
+        "46",
+        "55"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 162,
+      "question": "How might the tension between the camera team's design choices and the HI team's usability requirements impact the product development process and end-user experience? What compromises or tradeoffs might need to be considered to balance these competing priorities?",
+      "expected_chunk": 53,
+      "retrieved_chunks": [
+        "42",
+        "51",
+        "53"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 163,
+      "question": "Who told the team that the demo was what they needed to do?",
+      "expected_chunk": 54,
+      "retrieved_chunks": [
+        "54",
+        "76",
+        "51"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 164,
+      "question": "What was the team's initial reaction to the demo, and how did they overcome the challenge of delivering a superior user experience despite their doubts about their ability to do so?",
+      "expected_chunk": 54,
+      "retrieved_chunks": [
+        "54",
+        "73",
+        "55"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 165,
+      "question": "How could the camera hardware team have better engaged the video engineering team earlier in the development process to ensure a smoother integration and delivery of the superior user experience?",
+      "expected_chunk": 54,
+      "retrieved_chunks": [
+        "51",
+        "54",
+        "42"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 166,
+      "question": "What was central to Apple's marketing of the iPhone 7 Plus?",
+      "expected_chunk": 55,
+      "retrieved_chunks": [
+        "14",
+        "16",
+        "4"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 167,
+      "question": "Why was the collaborative debate at Apple central to the success of the Portrait mode feature in the iPhone 7 Plus?",
+      "expected_chunk": 55,
+      "retrieved_chunks": [
+        "55",
+        "46",
+        "21"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 168,
+      "question": "What can organizations learn from Apple's collaborative approach to developing innovative features like Portrait mode, and how might they apply similar processes to foster creativity and problem-solving within their own teams?",
+      "expected_chunk": 55,
+      "retrieved_chunks": [
+        "55",
+        "42",
+        "2"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 169,
+      "question": "What is \"accountability without control\" as described in the text?",
+      "expected_chunk": 56,
+      "retrieved_chunks": [
+        "56",
+        "8",
+        "57"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 170,
+      "question": "What challenges do senior leaders face in achieving their goals when they lack direct control over the teams and resources required to execute those goals?",
+      "expected_chunk": 56,
+      "retrieved_chunks": [
+        "44",
+        "25",
+        "79"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 171,
+      "question": "How can leaders effectively inspire, motivate, and align cross-functional teams to contribute to shared goals when they lack direct control over those teams?",
+      "expected_chunk": 56,
+      "retrieved_chunks": [
+        "44",
+        "57",
+        "21"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 172,
+      "question": "What can happen when teams work with a shared purpose, according to the text?",
+      "expected_chunk": 57,
+      "retrieved_chunks": [
+        "57",
+        "21",
+        "42"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 173,
+      "question": "What is the difference between \"good mess\" and \"bad mess\" in the context of the project described, and how does Apple handle team members associated with \"bad mess\"?",
+      "expected_chunk": 57,
+      "retrieved_chunks": [
+        "57",
+        "42",
+        "39"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 174,
+      "question": "How can leaders ensure that \"good mess\" rather than \"bad mess\" emerges when managing cross-functional teams working towards a shared organizational goal?",
+      "expected_chunk": 57,
+      "retrieved_chunks": [
+        "57",
+        "44",
+        "21"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 175,
+      "question": "What has led to tremendous innovation and success for Apple over the past two decades?",
+      "expected_chunk": 58,
+      "retrieved_chunks": [
+        "4",
+        "10",
+        "16"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 176,
+      "question": "How has Apple's rapid growth and scaling of its operations since 2008 impacted the company's ability to maintain its attention to detail and innovative culture, as exemplified by its approach to rounding the corners of rectangular objects?",
+      "expected_chunk": 58,
+      "retrieved_chunks": [
+        "58",
+        "36",
+        "38"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 177,
+      "question": "What are some potential drawbacks or limitations of Apple's highly centralized and detail-oriented approach to organizational structure and decision-making, particularly as the company has scaled significantly in size and complexity over the past decade?",
+      "expected_chunk": 58,
+      "retrieved_chunks": [
+        "78",
+        "24",
+        "10"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 178,
+      "question": "What shape does Apple use to create continuous curves and minimize light reflection?",
+      "expected_chunk": 59,
+      "retrieved_chunks": [
+        "59",
+        "37",
+        "36"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 179,
+      "question": "How does Apple's use of a \"squircle\" design principle contribute to the visual aesthetic and user experience of their products compared to a standard rounded rectangle?",
+      "expected_chunk": 59,
+      "retrieved_chunks": [
+        "59",
+        "37",
+        "36"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 180,
+      "question": "How could Apple's use of a \"squircle\" design approach inform the development of new product features or experiences that balance form, function, and user perception?",
+      "expected_chunk": 59,
+      "retrieved_chunks": [
+        "59",
+        "37",
+        "36"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 181,
+      "question": "What has the company had to do as it has grown, entered new markets, and moved into new technologies?",
+      "expected_chunk": 60,
+      "retrieved_chunks": [
+        "11",
+        "29",
+        "4"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 182,
+      "question": "How has Apple's organizational structure and leadership approach evolved over time to support its expansion into new markets and technologies?",
+      "expected_chunk": 60,
+      "retrieved_chunks": [
+        "24",
+        "10",
+        "78"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 183,
+      "question": "How could Apple's evolving functional structure and leadership model help or hinder its ability to respond to rapidly changing technological and market conditions in the future?",
+      "expected_chunk": 60,
+      "retrieved_chunks": [
+        "10",
+        "24",
+        "78"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 184,
+      "question": "What is one challenge posed by organizational growth according to the text?",
+      "expected_chunk": 61,
+      "retrieved_chunks": [
+        "81",
+        "80",
+        "8"
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 185,
+      "question": "How might Apple address the organizational challenges posed by growth, such as the pressure on senior leaders to oversee an increasing number of details and responsibilities?",
+      "expected_chunk": 61,
+      "retrieved_chunks": [
+        "65",
+        "78",
+        "62"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 186,
+      "question": "How could Apple balance the organizational challenges of growth, such as the pressure on senior leaders, with the need to maintain an integrated design function and leverage emerging technologies like AI and machine learning?",
+      "expected_chunk": 61,
+      "retrieved_chunks": [
+        "61",
+        "10",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 187,
+      "question": "How many employees did Apple have in 2006, the year before the iPhone's launch?",
+      "expected_chunk": 62,
+      "retrieved_chunks": [
+        "62",
+        "4",
+        "28"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 188,
+      "question": "Why has Apple been disciplined about limiting the number of senior positions within the company, even as it has expanded its overall workforce significantly?",
+      "expected_chunk": 62,
+      "retrieved_chunks": [
+        "62",
+        "7",
+        "26"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 189,
+      "question": "How might Apple's approach to limiting the number of senior leaders have affected its organizational agility and ability to adapt to changing market conditions over time?",
+      "expected_chunk": 62,
+      "retrieved_chunks": [
+        "62",
+        "24",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 190,
+      "question": "How many VPs were there at Apple?",
+      "expected_chunk": 63,
+      "retrieved_chunks": [
+        "63",
+        "18",
+        "4"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 191,
+      "question": "How has the increasing number of VPs at Apple impacted the leadership approach of its managers?",
+      "expected_chunk": 63,
+      "retrieved_chunks": [
+        "63",
+        "66",
+        "64"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 192,
+      "question": "How might the shift from individual contributors to larger, more diverse teams of experts impact the leadership and decision-making dynamics at Apple, and what potential challenges or adaptations might be required as a result?",
+      "expected_chunk": 63,
+      "retrieved_chunks": [
+        "39",
+        "78",
+        "63"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 193,
+      "question": "What is the purpose of the new educational program for Apple's VPs and directors?",
+      "expected_chunk": 64,
+      "retrieved_chunks": [
+        "64",
+        "63",
+        "30"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 194,
+      "question": "How does the discretionary leadership model that Apple has developed aim to address the challenge of driving innovation across the entire company, beyond just the product development team?",
+      "expected_chunk": 64,
+      "retrieved_chunks": [
+        "64",
+        "39",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 195,
+      "question": "How can the discretionary leadership model be effectively implemented across an organization to drive innovation beyond just product development, and what potential challenges or adaptations might be required to scale this approach successfully?",
+      "expected_chunk": 64,
+      "retrieved_chunks": [
+        "64",
+        "77",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 196,
+      "question": "What do leaders now need to exercise greater discretion over, according to the text?",
+      "expected_chunk": 65,
+      "retrieved_chunks": [
+        "64",
+        "65",
+        "25"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 197,
+      "question": "How can leaders at Apple effectively prioritize their time and attention to maximize value creation, while balancing their need for detailed involvement in core areas versus new activities?",
+      "expected_chunk": 65,
+      "retrieved_chunks": [
+        "65",
+        "78",
+        "39"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 198,
+      "question": "How can leaders effectively balance the need to be immersed in organizational details with the need to selectively focus their time and efforts on the highest-value activities, both within their core expertise and in new domains that require their attention?",
+      "expected_chunk": 65,
+      "retrieved_chunks": [
+        "65",
+        "35",
+        "77"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 199,
+      "question": "What are the three challenges that Rosner, the VP of applications, has had to contend with due to Apple's tremendous growth?",
+      "expected_chunk": 66,
+      "retrieved_chunks": [
+        "68",
+        "66",
+        "33"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 200,
+      "question": "What is the primary reason the VP of applications at Apple has had to contend with challenges arising from the company's tremendous growth?",
+      "expected_chunk": 66,
+      "retrieved_chunks": [
+        "66",
+        "63",
+        "65"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 201,
+      "question": "How could Apple encourage and empower its managers to continuously develop new areas of expertise, in order to better handle the challenges of rapid organizational growth?",
+      "expected_chunk": 66,
+      "retrieved_chunks": [
+        "78",
+        "65",
+        "26"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 202,
+      "question": "What has happened to the head count and number of projects under way in the past decade?",
+      "expected_chunk": 67,
+      "retrieved_chunks": [
+        "67",
+        "63",
+        "62"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 203,
+      "question": "How has the scale and scope of the executive's responsibilities changed over the past decade, and what challenges might this present in terms of diving into the details of all the projects under his purview?",
+      "expected_chunk": 67,
+      "retrieved_chunks": [
+        "65",
+        "71",
+        "66"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 204,
+      "question": "How can Apple's product portfolio manager effectively prioritize and manage the increasing complexity and scope of his responsibilities, given the significant growth in the number of projects and applications under his purview over the past decade?",
+      "expected_chunk": 67,
+      "retrieved_chunks": [
+        "26",
+        "65",
+        "78"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 205,
+      "question": "What four distinct categories does Roger Rosner's portfolio at Apple comprise?",
+      "expected_chunk": 68,
+      "retrieved_chunks": [
+        "68",
+        "32",
+        "72"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 206,
+      "question": "What is the significance of the increasing complexity of Roger Rosner's role as Apple's VP of applications, given the expansion of Apple's product portfolio and number of projects?",
+      "expected_chunk": 68,
+      "retrieved_chunks": [
+        "68",
+        "33",
+        "32"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 207,
+      "question": "What strategic considerations might Apple's leadership have to weigh as Roger Rosner's responsibilities and the complexity of his role continue to increase?",
+      "expected_chunk": 68,
+      "retrieved_chunks": [
+        "78",
+        "65",
+        "66"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 208,
+      "question": "What percentage of time did highly involved experts spend on the details?",
+      "expected_chunk": 69,
+      "retrieved_chunks": [
+        "69",
+        "38",
+        "35"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 209,
+      "question": "What key insights does this organizational culture model provide about how Apple's employees allocate their time and expertise across different tasks and responsibilities?",
+      "expected_chunk": 69,
+      "retrieved_chunks": [
+        "12",
+        "69",
+        "65"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 210,
+      "question": "What insights can be drawn from the distribution of time and expertise across the four quadrants, and how might this inform an organization's approach to task allocation and talent development?",
+      "expected_chunk": 69,
+      "retrieved_chunks": [
+        "69",
+        "79",
+        "80"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 211,
+      "question": "What is the publication date of the Harvard Business Review issue mentioned in the text?",
+      "expected_chunk": 70,
+      "retrieved_chunks": [
+        "3",
+        "41",
+        "70"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 212,
+      "question": "What implications does the fact that this article is \"made available to you with compliments of Apple Inc for your personal use\" have for the content and perspective of the article?",
+      "expected_chunk": 70,
+      "retrieved_chunks": [
+        "0",
+        "68",
+        "16"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 213,
+      "question": "What strategic implications does the rise of remote work during the COVID-19 pandemic have for organizations, and how might they need to adapt their management practices and organizational structures in response?",
+      "expected_chunk": 70,
+      "retrieved_chunks": [
+        "11",
+        "21",
+        "29"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 214,
+      "question": "What aspects of the News product does Rosner have responsibility for?",
+      "expected_chunk": 71,
+      "retrieved_chunks": [
+        "71",
+        "68",
+        "72"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 215,
+      "question": "What is the nature of Rosner's role in managing the collaboration and interdependence between the various components of the News product?",
+      "expected_chunk": 71,
+      "retrieved_chunks": [
+        "71",
+        "68",
+        "76"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 216,
+      "question": "How can Rosner effectively coordinate and align the various functional groups (engineering, operations, content, business relationships) to deliver a cohesive news product and experience, while also leveraging his own technical expertise to drive innovation?",
+      "expected_chunk": 71,
+      "retrieved_chunks": [
+        "71",
+        "68",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 217,
+      "question": "What areas did Roger Rosner collaborate with managers on across the company?",
+      "expected_chunk": 72,
+      "retrieved_chunks": [
+        "72",
+        "71",
+        "73"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 218,
+      "question": "How has Roger Rosner's expanding responsibilities affected the way he manages and delegates his work, and what implications does this have for the company's software architecture and user engagement?",
+      "expected_chunk": 72,
+      "retrieved_chunks": [
+        "72",
+        "71",
+        "76"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 219,
+      "question": "How could Roger Rosner's approach to delegating and sharing responsibilities with others across the company have impacted the organization's overall agility and adaptability to changing business needs?",
+      "expected_chunk": 72,
+      "retrieved_chunks": [
+        "71",
+        "76",
+        "72"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 220,
+      "question": "What is Rosner's role on the team according to the passage?",
+      "expected_chunk": 73,
+      "retrieved_chunks": [
+        "71",
+        "73",
+        "75"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 221,
+      "question": "What is the significance of Rosner's role as a \"teacher\" for his team, and how does it differ from a traditional classroom setting?",
+      "expected_chunk": 73,
+      "retrieved_chunks": [
+        "75",
+        "73",
+        "72"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 222,
+      "question": "How can Rosner's role as a \"teacher\" to his software development team, rather than a traditional manager, impact the team's development process and the overall effectiveness of the organization?",
+      "expected_chunk": 73,
+      "retrieved_chunks": [
+        "73",
+        "76",
+        "75"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 223,
+      "question": "What was the person responsible for learning about in order to work on News?",
+      "expected_chunk": 74,
+      "retrieved_chunks": [
+        "74",
+        "71",
+        "69"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 224,
+      "question": "What key challenges did the manager have to overcome in order to take on the responsibility for engineering and designing the news app?",
+      "expected_chunk": 74,
+      "retrieved_chunks": [
+        "74",
+        "71",
+        "66"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 225,
+      "question": "What strategies could the manager employ to effectively manage the steep learning curve required to acquire the diverse set of skills needed to oversee the engineering and design of a news app, while also balancing the need to focus on only the most critical new activities?",
+      "expected_chunk": 74,
+      "retrieved_chunks": [
+        "74",
+        "71",
+        "66"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 226,
+      "question": "What is the difference in the way leaders question subordinates about activities in the learning box versus the owning and teaching boxes?",
+      "expected_chunk": 75,
+      "retrieved_chunks": [
+        "75",
+        "76",
+        "77"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 227,
+      "question": "What is the purpose of leaders adopting a beginner's mindset when questioning subordinates about activities in the learning box?",
+      "expected_chunk": 75,
+      "retrieved_chunks": [
+        "75",
+        "73",
+        "76"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 228,
+      "question": "What are the implications of leaders adopting a beginner's mindset when questioning subordinates about activities in the learning box, and how might this approach differ from how they question about activities in the owning and teaching boxes?",
+      "expected_chunk": 75,
+      "retrieved_chunks": [
+        "75",
+        "76",
+        "77"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 229,
+      "question": "What activities does Rosner delegate to people with the requisite capabilities?",
+      "expected_chunk": 76,
+      "retrieved_chunks": [
+        "73",
+        "76",
+        "75"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 230,
+      "question": "How does Rosner's approach to delegating tasks differ from the typical approach of Apple's VPs?",
+      "expected_chunk": 76,
+      "retrieved_chunks": [
+        "76",
+        "72",
+        "66"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 231,
+      "question": "How can a leader effectively delegate and manage tasks that are outside their personal expertise, while still maintaining accountability and oversight?",
+      "expected_chunk": 76,
+      "retrieved_chunks": [
+        "77",
+        "65",
+        "66"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 232,
+      "question": "What percentage of his time does Rosner estimate he spends on activities he owns, including collaboration with others?",
+      "expected_chunk": 77,
+      "retrieved_chunks": [
+        "77",
+        "75",
+        "69"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 233,
+      "question": "What is the relationship between the amount of time a manager spends on different activities (such as delegating, learning, and teaching) and the needs of their business at a given time?",
+      "expected_chunk": 77,
+      "retrieved_chunks": [
+        "77",
+        "69",
+        "65"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 234,
+      "question": "What implications does the distribution of time across the different leadership activities (delegating, collaborating, learning, teaching) suggest for the effectiveness and adaptability of an organization's leadership model?",
+      "expected_chunk": 77,
+      "retrieved_chunks": [
+        "77",
+        "65",
+        "25"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 235,
+      "question": "What is rare or unique about Apple's functional organization?",
+      "expected_chunk": 78,
+      "retrieved_chunks": [
+        "10",
+        "24",
+        "78"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 236,
+      "question": "How does Apple's functional organization allow it to effectively expand into new areas and grow its teams, despite the fact that this organizational structure is considered rare for very large companies?",
+      "expected_chunk": 78,
+      "retrieved_chunks": [
+        "78",
+        "10",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 237,
+      "question": "How might Apple's functional organizational structure enable the company to effectively scale and innovate, even as it diversifies into new product and service areas, and what potential challenges or limitations might this structure present as the company continues to grow and evolve?",
+      "expected_chunk": 78,
+      "retrieved_chunks": [
+        "10",
+        "78",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 238,
+      "question": "What gets lost in a shift to business units according to the text?",
+      "expected_chunk": 79,
+      "retrieved_chunks": [
+        "79",
+        "11",
+        "5"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 239,
+      "question": "Why does the text suggest that companies often struggle to shift from having general managers in charge of business units, and what is the potential downside of this organizational structure according to the passage?",
+      "expected_chunk": 79,
+      "retrieved_chunks": [
+        "79",
+        "5",
+        "8"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 240,
+      "question": "What potential drawbacks or unintended consequences could arise from companies strictly adhering to the management theory that they should reorganize into divisions and business units as they grow larger, without adequately aligning decision-making authority with relevant expertise within those new structures?",
+      "expected_chunk": 79,
+      "retrieved_chunks": [
+        "79",
+        "8",
+        "5"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 241,
+      "question": "What is the \"intermediate step\" mentioned in the text for companies facing external challenges?",
+      "expected_chunk": 80,
+      "retrieved_chunks": [
+        "80",
+        "8",
+        "11"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 242,
+      "question": "How might the \"experts-leading-experts\" model help a company address the challenges of transitioning from an individual-oriented incentive system to a more collaborative approach?",
+      "expected_chunk": 80,
+      "retrieved_chunks": [
+        "80",
+        "64",
+        "2"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 243,
+      "question": "What potential challenges or risks might a company face when transitioning from a traditional management structure to an \"experts-leading-experts\" model, and how could they be addressed?",
+      "expected_chunk": 80,
+      "retrieved_chunks": [
+        "80",
+        "79",
+        "31"
+      ],
+      "correct": true,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 244,
+      "question": "What is Joel M. Podolny's current position at Apple?",
+      "expected_chunk": 81,
+      "retrieved_chunks": [
+        "28",
+        "81",
+        "7"
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 245,
+      "question": "What key insights or strategies does Apple's experience suggest about how leaders can effectively transition their organizations to a more functional structure?",
+      "expected_chunk": 81,
+      "retrieved_chunks": [
+        "10",
+        "81",
+        "24"
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 246,
+      "question": "What are the potential challenges and considerations that Apple may have faced in transitioning to a functional organizational structure, and how did the company navigate those challenges to achieve its extraordinary results?",
+      "expected_chunk": 81,
+      "retrieved_chunks": [
+        "6",
+        "10",
+        "24"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    },
+    {
+      "question_id": 247,
+      "question": "What university is the author a professor at?",
+      "expected_chunk": 82,
+      "retrieved_chunks": [],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 248,
+      "question": "What is the relationship between the author's affiliations and the institutions mentioned in the text?",
+      "expected_chunk": 82,
+      "retrieved_chunks": [
+        "1",
+        "3",
+        "70"
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 249,
+      "question": "What insights can be drawn from the author's experience at multiple prestigious academic institutions, and how might those insights inform effective management and leadership practices in a business context?",
+      "expected_chunk": 82,
+      "retrieved_chunks": [
+        "81",
+        "31",
+        "44"
+      ],
+      "correct": false,
+      "complexity": "advanced"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "total_questions": 10,
+    "correct_retrievals": 4,
+    "accuracy": 0.4,
+    "mean_reciprocal_rank": 0.283,
+    "chunk_coverage": 1.0
+  },
+  "by_complexity": {
+    "basic": 0.4,
+    "intermediate": 0.4
+  },
+  "detailed_results": [
+    {
+      "question_id": 1,
+      "question": "What is the publication date of the article?",
+      "expected_chunk": 0,
+      "retrieved_chunks": [],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 2,
+      "question": "How does Apple's organizational structure, as described in the article, enable its innovation capabilities?",
+      "expected_chunk": 0,
+      "retrieved_chunks": [
+        24,
+        10,
+        78
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 3,
+      "question": "What is the publication date of the Harvard Business Review issue mentioned in the text?",
+      "expected_chunk": 1,
+      "retrieved_chunks": [
+        3,
+        41,
+        70
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 4,
+      "question": "What strategic implications does the Harvard Business Review's publication date of November-December 2020 have for the content and perspective of the article?",
+      "expected_chunk": 1,
+      "retrieved_chunks": [
+        41,
+        3,
+        70
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 5,
+      "question": "Who are the authors of the article?",
+      "expected_chunk": 2,
+      "retrieved_chunks": [
+        71,
+        1,
+        2
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 6,
+      "question": "How does Apple's organizational culture, as described in the article, enable innovation?",
+      "expected_chunk": 2,
+      "retrieved_chunks": [
+        2,
+        24,
+        0
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 7,
+      "question": "What magazine is this article from?",
+      "expected_chunk": 3,
+      "retrieved_chunks": [
+        68,
+        71,
+        1
+      ],
+      "correct": false,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 8,
+      "question": "What insights or lessons from the Harvard Business Review article could be applied to improve innovation and business strategy within a large technology company like Apple?",
+      "expected_chunk": 3,
+      "retrieved_chunks": [
+        10,
+        29,
+        13
+      ],
+      "correct": false,
+      "complexity": "intermediate"
+    },
+    {
+      "question_id": 9,
+      "question": "What was Apple's revenue in 2019 according to the text?",
+      "expected_chunk": 4,
+      "retrieved_chunks": [
+        27,
+        4,
+        20
+      ],
+      "correct": true,
+      "complexity": "basic"
+    },
+    {
+      "question_id": 10,
+      "question": "What organizational design and leadership model did Apple implement that played a crucial role in the company's innovation success after Steve Jobs returned in 1997?",
+      "expected_chunk": 4,
+      "retrieved_chunks": [
+        4,
+        24,
+        28
+      ],
+      "correct": true,
+      "complexity": "intermediate"
+    }
+  ]
+}
