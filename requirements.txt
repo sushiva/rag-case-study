@@ -1,18 +1,21 @@
+# Streamlit & UI
+streamlit>=1.28.0
+plotly>=5.17.0
+pandas>=2.0.0
+
 # Core Framework
-streamlit==1.28.1
-python-dotenv==1.0.0
+python-dotenv>=1.0.0
 
 # PDF Processing
-PyPDF2==3.0.1
+PyPDF2>=3.0.0
 pypdf>=4.0.0
 
 # LLM & Embeddings
 langchain>=0.1.0
-sentence-transformers==3.0.0
-ollama==0.1.0
+sentence-transformers>=3.0.0
 
 # Vector Databases
-faiss-cpu==1.8.0
+faiss-cpu>=1.10.0
 chromadb>=0.4.0
 
 # LLM API Clients
@@ -21,12 +24,11 @@ google-generativeai>=0.3.0
 anthropic>=0.7.0
 
 # Utilities
-requests==2.31.0
-
+requests>=2.31.0
 PyYAML>=6.0.3
 
-streamlit>=1.28.0
-plotly>=5.17.0
-pandas>=2.0.0
-google-generativeai>=0.3.0
-openai>=1.3.0
+# Core Dependencies
+protobuf>=4.0.0
+langchain-text-splitters>=0.0.1
+numpy>=1.24.0
+scikit-learn>=1.3.0
