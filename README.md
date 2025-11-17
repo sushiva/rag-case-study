@@ -55,7 +55,7 @@ Then:
 ### Google Gemini
 - gemini-2.0-flash
 - gemini-1.5-pro
-- gemini-1.5-flash
+- gemini-2.5-flash
 
 ### OpenAI
 - gpt-4-turbo

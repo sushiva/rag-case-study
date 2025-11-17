@@ -32,3 +32,15 @@ protobuf>=4.0.0
 langchain-text-splitters>=0.0.1
 numpy>=1.24.0
 scikit-learn>=1.3.0
+
+# SHAP Visualization Requirements
+# Add these to your existing requirements.txt
+
+# SHAP for model explanations
+shap>=0.42.0
+
+# Required for SHAP visualizations
+matplotlib>=3.7.0
+seaborn>=0.12.0
+# Optional: For interactive SHAP plots
+ipython>=8.0.0
