@@ -1,0 +1,57 @@
+# Go to project
+cd ~/portfolio-project/rag-case-study
+
+# Create folders
+mkdir -p src golden_data results
+
+# Copy our implementations
+cp /mnt/user-data/outputs/rag_system_complete_example.py src/rag_system.py
+cp /mnt/user-data/outputs/question_generator_complete_example.py src/question_generator.py
+cp /mnt/user-data/outputs/golden_dataset_apple_organization.json golden_data/
+
+# Create __init__
+touch src/__init__.py
+
+# Create main.py (use the cat > main.py command above)
+
+# Verify
+echo "Checking files..."
+test -f src/rag_system.py && echo "✓ rag_system.py" || echo "✗ Missing"
+test -f src/question_generator.py && echo "✓ question_generator.py" || echo "✗ Missing"
+test -f golden_data/golden_dataset_apple_organization.json && echo "✓ golden_dataset.json" || echo "✗ Missing"
+test -f data/HBR_How_Apple_Is_Organized_For_Innovation-4.pdf && echo "✓ Apple PDF" || echo "✗ Missing"
+test -f data/chunks.json && echo "✓ chunks.json" || echo "✗ Missing"
+
+# Run
+python main.py
+```
+
+---
+
+## 🎯 YOUR FINAL STRUCTURE WILL BE
+```
+rag-case-study/
+├── src/                           ✅ NEW
+│   ├── __init__.py
+│   ├── rag_system.py             ✅ Our complete RAG system
+│   └── question_generator.py     ✅ Our question generator
+│
+├── golden_data/                   ✅ NEW
+│   └── golden_dataset_apple_organization.json  ✅ 15 manual queries
+│
+├── results/                       ✅ NEW
+│   ├── auto_generated_questions.json
+│   └── auto_evaluation.json
+│
+├── data/                          ✅ Existing
+│   ├── HBR_How_Apple_Is_Organized_For_Innovation-4.pdf
+│   ├── chunks.json
+│   └── ...
+│
+├── scripts/                       ✅ Existing
+├── utils/                         ✅ Existing
+├── main.py                        ✅ NEW Orchestrator
+├── app.py                         ✅ Existing
+├── config.yaml
+├── requirements.txt
+└── README.md
